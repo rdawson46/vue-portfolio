@@ -1,0 +1,18 @@
+<script setup></script>
+
+<template>
+    <div>
+        <h1>Resume</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vero fuga voluptate modi doloremque quis ad omnis consectetur corporis minus aspernatur neque quae, molestias dolore tenetur hic qui accusantium fugiat?</p>
+    </div>
+</template>
+
+<style scoped>
+div{
+    background-color: var(--primary);
+    margin: 25px 0;
+    padding: 0 25px;
+    width: calc(100% - 50px);
+    height: 100vh;
+}
+</style>
