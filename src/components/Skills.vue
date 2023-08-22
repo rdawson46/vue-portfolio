@@ -3,15 +3,21 @@
 <template>
     <div>
         <h1>Skills</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vero fuga voluptate modi doloremque quis ad omnis consectetur corporis minus aspernatur neque quae, molestias dolore tenetur hic qui accusantium fugiat?</p>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et animi recusandae provident iusto tenetur veritatis quae cupiditate quibusdam est odio obcaecati, repudiandae numquam iste, reprehenderit nemo vero iure. Sunt, labore!</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et animi recusandae provident iusto tenetur veritatis quae cupiditate quibusdam est odio obcaecati, repudiandae numquam iste, reprehenderit nemo vero iure. Sunt, labore!</li>
     </div>
 </template>
 
 <style scoped>
+
+h1{
+    color: var(--secondary);
+}
+
 div{
     background-color: var(--primary);
-    margin: 25px 0;
-    padding: 0 25px;
+    margin: 25px 0 0 0;
+    padding: 5px 25px 0 25px;
     width: calc(100% - 50px);
     height: 100vh;
 }

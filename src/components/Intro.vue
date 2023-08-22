@@ -58,7 +58,8 @@ onMounted(()=>{
     color: var(--primary);
     padding: 15px 45px;
     border-radius: 12px;
-    opacity: 0.87;
+    opacity: 0.80;
+    box-shadow: 0 0 12px 8px #343434;
 }
 
 .background::before{
@@ -69,7 +70,8 @@ onMounted(()=>{
     z-index: -1;
     background-image: url('./../assets/mountain.webp');
     background-size: cover;
-    /* opacity: 0.5; */
+    background-position: center;
+    opacity: 0.45;
     filter: grayscale(100%);
 }
 

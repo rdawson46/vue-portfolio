@@ -9,6 +9,11 @@
 </template>
 
 <style scoped>
+
+h1{
+    color: var(--accent);
+}
+
 div{
     margin: 25px 0;
     padding: 0 25px;

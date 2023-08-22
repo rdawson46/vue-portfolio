@@ -1,9 +1,23 @@
 <script setup>
+import { onMounted } from 'vue';
 
+onMounted(()=>{
+    document.addEventListener('scroll', event=>{
+        const height = window.scrollY;
+
+        const nav = document.getElementById('navbar');
+
+        if(height >= 45){
+            nav.classList.add('filledNav');
+        } else{
+            nav.classList.remove('filledNav')
+        }
+    })
+});
 </script>
 
 <template>
-    <nav>
+    <nav class="clearNav" id="navbar">
 
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -28,21 +42,41 @@
 
 <style scoped>
 nav{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--primary);
-    height: 60px;
-    box-shadow: 0 0 25px 0 #181818;
     z-index: 5;
 }
 
+.clearNav{
+    height: 75px;
+    line-height: calc(75px/2);
+    transition: all 450ms ease-in;
+}
+
+.filledNav{
+    background-color: var(--primary);
+    height: 60px;
+    box-shadow: 0 0 25px 0 #181818;
+    line-height: 30px;
+}
+
 nav svg, nav i{
+    /* height: 30px; */
+    /* margin: 15px 30px; */
+    fill: var(--text);
+    transition: 450ms ease-in;
+}
+
+.clearNav svg, .clearNav i{
+    margin: calc(75px/4) calc(75px/2);
+    height: calc(75px/2);
+}
+
+.filledNav svg, .clearNav i{
     height: 30px;
     margin: 15px 30px;
-    fill: var(--text);
-    transition: 300ms;
 }
 
 nav svg:hover, i:hover{
@@ -57,7 +91,6 @@ nav ul{
 
 nav ul li{
     display: inline-block;
-    line-height: 30px;
     margin: 0 20px;
     font-size: 20px;
     font-weight: bold;
@@ -102,7 +135,8 @@ nav li a:hover:before{
 }
 
 
-@media only screen and (max-width: 775px) {
+/* @media only screen and (max-width: 775px) { */
+@media only screen and (max-width: 810px) {
     nav ul li{
         font-size: 18px;
         margin: 0 10px;
@@ -123,7 +157,8 @@ nav li a:hover:before{
     display: none;
 }
 
-@media only screen and (max-width: 650px){
+/* @media only screen and (max-width: 650px){ */
+@media only screen and (max-width: 690px){
     .checkbtn{
         display: block;
     }

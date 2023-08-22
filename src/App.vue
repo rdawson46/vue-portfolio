@@ -56,14 +56,10 @@ onMounted(()=>{
 
 <style scoped>
 
-#content{
-  margin-top: 60px;
-}
-
 #blob{
   top: 50%;
   left: 50%;
-  height: 250px;
+  height: 100px;
   aspect-ratio: 1;
   background-color: white;
   background: linear-gradient(
@@ -97,14 +93,14 @@ onMounted(()=>{
 .hidden{
   opacity: 0%;
   filter: blur(5px);
-  transform: translateX(-100%);
+  /* transform: translateX(-100%); */
   transition: all 650ms ease-in-out;
 }
 
 .show{
   opacity: 100%;
   filter: blur(0);
-  transform: translateX(0);
+  /* transform: translateX(0); */
 }
 
 </style>

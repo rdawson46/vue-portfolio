@@ -6,7 +6,9 @@
   --text: #F6E2D5;
   --background: #0e1c25;
   --primary: #194c6c;
-  --secondary: #211007;
+  /* --secondary: #211007; */
+  /* --secondary: #311e11; */
+  --secondary: #3d1800;
   --accent: #a2ceea;
 
   color-scheme: light dark;
@@ -25,6 +27,7 @@
 
 html{
   scroll-behavior: smooth;
+  scroll-padding: 60px;
 }
 
 body {
