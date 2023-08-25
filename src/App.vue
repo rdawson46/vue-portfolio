@@ -38,10 +38,8 @@ onMounted(()=>{
 
 <template>
   <Navbar/>
-  <div id="blob">
-  </div>
+  <div id="blob"></div>
   <div id="content">
-    <!-- rest of site here -->
     <Intro/>
     <About id="about-me" class="hidden"/>
     <Resume id="resume" class="hidden"/>
@@ -71,7 +69,7 @@ onMounted(()=>{
   border-radius: 50%;
   translate: -50% -50%;
   animation: rotate 10s infinite;
-  filter: blur(100px);
+  filter: blur(75px);
   z-index: 2;
 }
 
@@ -93,14 +91,12 @@ onMounted(()=>{
 .hidden{
   opacity: 0%;
   filter: blur(5px);
-  /* transform: translateX(-100%); */
   transition: all 650ms ease-in-out;
 }
 
 .show{
   opacity: 100%;
   filter: blur(0);
-  /* transform: translateX(0); */
 }
 
 </style>

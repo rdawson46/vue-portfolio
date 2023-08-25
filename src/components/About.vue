@@ -38,7 +38,8 @@ h1{
     margin: 25px 0;
     padding: 0 25px;
     width: calc(100% - 50px);
-    height: 100vh;
+    min-height: calc(100vh - 60px);
+    height: fit-content;
         /* display: flex;
         justify-content: center;
         flex-direction: column; */
