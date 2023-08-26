@@ -28,6 +28,7 @@
 
 p{
     text-indent: 2rem;
+    font-size: 1.25rem;
 }
 
 h1{
@@ -69,7 +70,7 @@ h1{
 }
 
 img{
-    width: 150px;
+    width: 12.5rem;
     aspect-ratio: 1;
     border-radius: 50%;
     border: 2px solid #343434;

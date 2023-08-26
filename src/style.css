@@ -3,6 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   
+  font-size: 1.25vmax;
   --text: #F6E2D5;
   --background: #0e1c25;
   --primary: #194c6c;
@@ -45,6 +46,15 @@ body {
   /* padding: 2rem; */
   /* text-align: center; */
 }
+
+p{
+  font-size: 1.25rem;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

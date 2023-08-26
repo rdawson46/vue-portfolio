@@ -50,33 +50,42 @@ nav{
 }
 
 .clearNav{
-    height: 75px;
-    line-height: calc(75px/2);
+    /* height: 75px; */
+    height: 4.25rem;
+    /* line-height: calc(75px/2); */
+    line-height: calc(4.25rem/2);
     transition: all 450ms ease-in;
 }
 
 .filledNav{
     background-color: var(--primary);
-    height: 60px;
-    box-shadow: 0 0 25px 0 #181818;
-    line-height: 30px;
+    /* height: 60px; */
+    height: 3.4rem;
+    /* box-shadow: 0 0 25px 0 #181818; */
+    box-shadow: 0 0 1.5rem 0 #181818;
+    /* line-height: 30px; */
+    line-height: 1.7rem;
 }
 
 nav svg, nav i{
     /* height: 30px; */
     /* margin: 15px 30px; */
     fill: var(--text);
-    transition: 450ms ease-in;
+    transition: 250ms ease-in;
 }
 
 .clearNav svg, .clearNav i{
-    margin: calc(75px/4) calc(75px/2);
-    height: calc(75px/2);
+    /* margin: calc(75px/4) calc(75px/2);
+    height: calc(75px/2); */
+    margin: calc(4.25rem/4) calc(4.25rem/2);
+    height: calc(4.25rem/2);
 }
 
-.filledNav svg, .clearNav i{
-    height: 30px;
-    margin: 15px 30px;
+.filledNav svg, .filledNav i{
+    /* height: 30px;
+    margin: 15px 30px; */
+    height: calc(3.4rem/2);
+    margin: calc(3.4rem/4) calc(3.4rem/2);
 }
 
 nav svg:hover, i:hover{
@@ -85,14 +94,17 @@ nav svg:hover, i:hover{
 
 nav ul{
     float: right;
-    margin-right: 30px;
+    /* margin-right: 30px; */
+    margin: 1rem 1.5rem 1rem 0;
     list-style: none;
 }
 
 nav ul li{
     display: inline-block;
-    margin: 0 20px;
-    font-size: 20px;
+    /* margin: 0 20px; */
+    /* font-size: 20px; */
+    margin: 0 1rem;
+    font-size: 1.15rem;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -136,19 +148,22 @@ nav li a:hover:before{
 
 
 /* @media only screen and (max-width: 775px) { */
-@media only screen and (max-width: 810px) {
+/* @media only screen and (max-width: 810px) {
     nav ul li{
         font-size: 18px;
         margin: 0 10px;
     }
-}
+} */
 
 .checkbtn{
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 1.7rem;
     color: var(--text);
     float: right;
-    line-height: 60px;
-    margin-right: 15px;
+    /* line-height: 60px; */
+    /* margin-right: 15px; */
+    line-height: 3.75rem;
+    margin-right: 1rem;
     cursor: pointer;
     display: none;
 }
@@ -162,12 +177,14 @@ nav li a:hover:before{
     .checkbtn{
         display: block;
     }
-    nav ul{
+
+    .clearNav ul{
         position: fixed;
         width: 100%;
         height: 100vh;
         background: var(--secondary);
-        top: 60px;
+        /* top: 60px; */
+        top: 4.25rem;
         left: -100%;
         margin-top: 0;
         text-align: center;
@@ -175,11 +192,22 @@ nav li a:hover:before{
         transition: all 500ms;
     }
 
+    .filledNav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--secondary);
+        /* top: 60px; */
+        top: 3.4rem;
+        left: -100%;
+        margin-top: 0;
+        text-align: center;
+        padding: 0;
+        transition: all 500ms;
+    }
+    
     nav ul li{
         display: block;
-    }
-
-    nav ul li{
         font-size: 20px;
         margin: 30px 0;
         padding: 15px 0;
