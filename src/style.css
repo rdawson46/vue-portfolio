@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   
-  font-size: 1.25vmax;
+  font-size: max(1.25vmax, 16px);
   --text: #F6E2D5;
   --background: #0e1c25;
   --primary: #194c6c;
@@ -61,7 +61,8 @@ h1{
     --text: #0e1c25;
     --background: #f6e2d5;
     --primary: #194c6c;
-    --secondary: #f4dacc;
+    /* --secondary: #f4dacc; */
+    --secondary: #f1916d;
     --accent: #2d8bc6;
   }
   a:hover {

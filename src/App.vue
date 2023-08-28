@@ -71,6 +71,7 @@ onMounted(()=>{
   animation: rotate 10s infinite;
   filter: blur(75px);
   z-index: 2;
+  pointer-events: none;
 }
 
 @keyframes rotate{
