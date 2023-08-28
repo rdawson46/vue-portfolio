@@ -1,29 +1,34 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+
+const index = ref(0);
+
+</script>
 
 <template>
     <div class="section">
         <h1>Projects</h1>
 
-        <div class="language">
+        <div class="language" v-if='index == 0'>
             <h2>Python</h2>
-            <div class="project-container">
-                <div class="project">
-                    <h3>Paper-Trader Back End</h3>
+            <div class="project-container" >
+                <div class="project" >
+                    <h3>Paper-Trader</h3>
 
-                    Project description
+                    <p>
+                        Built with Flask, PostgreSQL, and the Alpaca Trading API.
+                        Allows for users to make accounts and make stocks trades with paper money.
+                    </p>
 
-                    <br>
-
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Data Mine</h3>
 
-                    Project description
+                    <p>Runs with scheduled events</p>
 
-                    <br>
-
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Pi-Daily Email</h3>
@@ -32,7 +37,7 @@
 
                     <br>
 
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Social Media App</h3>
@@ -41,7 +46,7 @@
 
                     <br>
 
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Chat App</h3>
@@ -50,12 +55,12 @@
 
                     <br>
 
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
             </div>
         </div>
 
-        <div class="language">
+        <div class="language" v-if='index == 1'>
             <h2>Javascript</h2>
             <div class="project-container">
                 <div class="project">
@@ -65,7 +70,7 @@
 
                     <br>
 
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Chat App</h3>
@@ -74,7 +79,7 @@
 
                     <br>
 
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Blockchain Coin-Flip</h3>
@@ -83,7 +88,7 @@
 
                     <br>
 
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>This Website</h3>
@@ -92,31 +97,30 @@
 
                     <br>
 
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
             </div>
         </div>
 
-        <div class="language">
+        <div class="language" v-if='index == 2'>
             <h2>Other</h2>
             <div class="project-container">
                 <div class="project">
                     <h3>Course Scheduler</h3>
 
-                    Project description
-
+                    Made with Java and SQL.
                     <br>
 
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Language Learning</h3>
 
-                    Project description
+                    <p>Currently leanring Rust.</p>
 
                     <br>
 
-                    <a href="">Github Link>></a>
+                    <a href="">Github >></a>
                 </div>
             </div>
         </div>
@@ -150,7 +154,32 @@ h1 {
     transition: all 350ms;
 }
 
-@media only screen and (max-width: 690px) {
+.project h3{
+    margin: 0.5rem 0;
+}
+
+
+@media only screen and (min-width: 650px) {
+    .project{
+        width: 15rem;
+    }
+
+    .project-container:hover .project:hover{
+        filter: brightness(100%) grayscale(0);
+        background-color: var(--secondary);
+        box-shadow: 0 0 0 0;
+        scale: 115%;
+        z-index: 10;
+    }
+
+    /* .project-container:hover .project{ */
+        /* filter: brightness(45%) grayscale(100%); */
+        /* box-shadow: 0 0 4px 1px #888888;  */
+        /* scale: 90%;  */
+    /* } */
+}
+
+@media only screen and (max-width: 300px) {
     .project-container{
         flex-direction: column;
     }
@@ -165,7 +194,7 @@ a {
     background-image: linear-gradient(to right,
             var(--accent),
             var(--accent) 50%,
-            var(--text) 50%);
+            var(--background) 50%);
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
@@ -208,15 +237,6 @@ a:hover:before {
                 var(--secondary) 50%);
     }
 }
-.project-container:hover .project:hover{
-    filter: brightness(100%) grayscale(0);
-    background-color: var(--secondary);
-    box-shadow: 0 0 0 0;
-}
 
-.project-container:hover .project{
-    filter: brightness(45%) grayscale(100%);
-    /* box-shadow: 0 0 8px 2px #888888; */
-}
 
 </style>

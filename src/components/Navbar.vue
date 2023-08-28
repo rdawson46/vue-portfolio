@@ -7,7 +7,7 @@ onMounted(()=>{
 
         const nav = document.getElementById('navbar');
 
-        if(height >= 15){
+        if(height >= 5){
             nav.classList.add('filledNav');
         } else{
             nav.classList.remove('filledNav')
@@ -54,7 +54,7 @@ nav{
     height: 4.25rem;
     /* line-height: calc(75px/2); */
     line-height: calc(4.25rem/2);
-    transition: all 450ms ease-in;
+    transition: all 250ms ease-in;
 }
 
 .filledNav{
@@ -108,7 +108,7 @@ nav svg:hover, i:hover{
 nav ul{
     float: right;
     /* margin-right: 30px; */
-    /* margin: 1rem 1.5rem 1rem 0; */
+    margin: 1rem 1.5rem 1rem 0;
     list-style: none;
 }
 

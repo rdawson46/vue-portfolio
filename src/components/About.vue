@@ -28,7 +28,6 @@
 
 p{
     text-indent: 2rem;
-    font-size: 1.25rem;
 }
 
 h1{
