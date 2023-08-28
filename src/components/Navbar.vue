@@ -3,11 +3,11 @@ import { onMounted } from 'vue';
 
 onMounted(()=>{
     document.addEventListener('scroll', event=>{
-        const height = window.scrollY;
+        const height = window.scrollY / parseFloat(window.getComputedStyle(document.documentElement).fontSize);
 
         const nav = document.getElementById('navbar');
 
-        if(height >= 45){
+        if(height >= 15){
             nav.classList.add('filledNav');
         } else{
             nav.classList.remove('filledNav')
@@ -74,6 +74,7 @@ nav svg, nav i{
     transition: 250ms ease-in;
 }
 
+
 .clearNav svg, .clearNav i{
     /* margin: calc(75px/4) calc(75px/2);
     height: calc(75px/2); */
@@ -85,7 +86,19 @@ nav svg, nav i{
     /* height: 30px;
     margin: 15px 30px; */
     height: calc(3.4rem/2);
+    font-size: calc(3.4rem/2);
     margin: calc(3.4rem/4) calc(3.4rem/2);
+}
+
+.clearNav ul{
+    margin-top: calc(4.25rem/4);
+    margin-bottom: calc(4.25rem/4);
+}
+
+.filledNav ul{
+    /* margin-bottom: 0px; */
+    margin-top: calc(3.4rem/4);
+    margin-bottom: calc(3.4rem/4);
 }
 
 nav svg:hover, i:hover{
@@ -95,7 +108,7 @@ nav svg:hover, i:hover{
 nav ul{
     float: right;
     /* margin-right: 30px; */
-    margin: 1rem 1.5rem 1rem 0;
+    /* margin: 1rem 1.5rem 1rem 0; */
     list-style: none;
 }
 
@@ -115,7 +128,7 @@ nav li a{
         var(--accent),
         var(--accent) 50%,
         var(--text) 50%
-    );
+        );
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
@@ -124,20 +137,34 @@ nav li a{
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
     transition: all 0.3 ease-in-out;
+    }
+    
+    nav li a:before{
+        content: '';
+        background: var(--accent);
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+@media (prefers-color-scheme: light){
+    .filledNav svg{
+        fill: var(--secondary);
+    }
+    
+    .filledNav li a{
+        background-image: linear-gradient(
+        to right,
+        var(--accent),
+        var(--accent) 50%,
+        var(--secondary) 50%
+        );
+    }
 }
-
-nav li a:before{
-    content: '';
-    background: var(--accent);
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
-}
-
 nav li a:hover{
     background-position: 0;
 }
@@ -148,7 +175,7 @@ nav li a:hover:before{
 
 
 /* @media only screen and (max-width: 775px) { */
-/* @media only screen and (max-width: 810px) {
+    /* @media only screen and (max-width: 810px) {
     nav ul li{
         font-size: 18px;
         margin: 0 10px;
@@ -173,26 +200,26 @@ nav li a:hover:before{
 }
 
 /* @media only screen and (max-width: 650px){ */
-@media only screen and (max-width: 690px){
-    .checkbtn{
-        display: block;
-    }
-
-    .clearNav ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: var(--secondary);
-        /* top: 60px; */
-        top: 4.25rem;
-        left: -100%;
-        margin-top: 0;
-        text-align: center;
-        padding: 0;
-        transition: all 500ms;
-    }
-
-    .filledNav ul{
+    @media only screen and (max-width: 690px){
+        .checkbtn{
+            display: block;
+        }
+        
+        .clearNav ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: var(--secondary);
+            /* top: 60px; */
+            top: 4.25rem;
+            left: -100%;
+            margin-top: 0;
+            text-align: center;
+            padding: 0;
+            transition: all 500ms;
+        }
+        
+        .filledNav ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -213,10 +240,11 @@ nav li a:hover:before{
         padding: 15px 0;
         line-height: 30px;
     }
-
+    
     #check:checked ~ ul{
         left: 0;
     }
-
+    
 }
+
 </style>

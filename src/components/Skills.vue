@@ -22,4 +22,10 @@ h1{
     min-height: calc(100vh - 60px);
     height: fit-content;
 }
+
+@media (prefers-color-scheme: light){
+    .section{
+        color: var(--background);
+    }
+}
 </style>

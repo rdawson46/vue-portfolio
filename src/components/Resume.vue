@@ -24,7 +24,14 @@
             </div>
             <div class="box three">
                 <h2 class="title">Contact</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, optio dolores sed autem tempore vitae enim modi reprehenderit molestiae veritatis asperiores laboriosam, fugit illum, eaque id error suscipit maiores repudiandae?</p>
+                <p>
+                    I can be best reached on my LinkedIn page: 
+                    <br>
+                    <a href="https://www.linkedin.com/in/ryan-crooks/" target="_blank" rel="noreferrer">
+                        LinkedIn
+                    </a>
+
+                </p>
             </div>
             <div class="box four">
                 <h2 class="title">Experience</h2>
@@ -97,6 +104,13 @@ h1{
     color: var(--secondary)
 }
 
+@media (prefers-color-scheme: light){
+    .three{
+        color: var(--background)
+
+    }
+}
+
 .four{
     grid-column: 2/4;
     grid-row: 2;
@@ -113,6 +127,45 @@ h1{
 .job-title{
     margin: 5px 0;
 }
+
+a{
+    background-image: linear-gradient(
+        to right,
+        var(--secondary),
+        var(--secondary) 50%,
+        var(--secondary)50%
+    );
+    font-weight: bold;
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    background-clip: initial;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3 ease-in-out;
+}
+
+a:before{
+    content: '';
+    background: var(--secondary);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover{
+    background-position: 0;
+}
+
+a:hover:before{
+    width: 100%;
+}
+
 
 @media only screen and (max-width: 650px) {
     .grid{
