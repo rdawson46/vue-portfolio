@@ -10,6 +10,11 @@ const index = ref(0);
     <div class="section">
         <h1>Projects</h1>
 
+        <button @click="index=0">Python</button>
+        <button @click="index=1">Javascript</button>
+        <button @click="index=2">Other</button>
+
+
         <div class="language" v-if='index == 0'>
             <h2>Python</h2>
             <div class="project-container" >
@@ -26,34 +31,35 @@ const index = ref(0);
                 <div class="project">
                     <h3>Data Mine</h3>
 
-                    <p>Runs with scheduled events</p>
+                    <p>
+                        Runs with scheduled events to gather stock data, make ML models, makes predictions,
+                        and manages a portfolio. Then uses a Flask app to host a dashboard to track progress.
+                    </p>
 
                     <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Pi-Daily Email</h3>
 
-                    Project description
-
-                    <br>
+                    <p>
+                        Uses multiple APIs to format an email every day to send useful information to a list of users.
+                    </p>
 
                     <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Social Media App</h3>
 
-                    Project description
-
-                    <br>
+                    <p>
+                        Built using Django. Users can make accounts, post, follow users, see global feeds, and followed feed.
+                    </p>
 
                     <a href="">Github >></a>
                 </div>
                 <div class="project">
                     <h3>Chat App</h3>
 
-                    Project description
-
-                    <br>
+                    <p>Uses a Flask app and SocketIO for users to send group messages in real time.</p>
 
                     <a href="">Github >></a>
                 </div>
@@ -108,8 +114,8 @@ const index = ref(0);
                 <div class="project">
                     <h3>Course Scheduler</h3>
 
-                    Made with Java and SQL.
-                    <br>
+                    <p>Made with Java and SQL.</p>
+                    
 
                     <a href="">Github >></a>
                 </div>
@@ -194,7 +200,7 @@ a {
     background-image: linear-gradient(to right,
             var(--accent),
             var(--accent) 50%,
-            var(--background) 50%);
+            var(--text) 50%);
     background-size: 200% 100%;
     background-position: -100%;
     display: inline-block;
