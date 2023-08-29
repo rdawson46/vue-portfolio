@@ -28,7 +28,8 @@
 
 html{
   scroll-behavior: smooth;
-  scroll-padding: 60px;
+  /* scroll-padding: 60px; */
+  scroll-padding-top: 3.4rem;
 }
 
 body {
@@ -68,4 +69,23 @@ h1{
   button {
     background-color: #f9f9f9;
   }
+}
+
+::-webkit-scrollbar{
+  width: 0.25rem;
+  background-color: #343434;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 0.125rem;
+  transition: all 150ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
