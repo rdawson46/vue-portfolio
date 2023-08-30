@@ -30,7 +30,7 @@ function buttonWrapper(event) {
             <button @click="buttonHandler(2, $event)">Other</button>
         </div>
 
-        <Transition name="fade">
+        <Transition name="fade" mode="out-in">
             <div class="language" v-if='index == 0'>
                 <h2>Python</h2>
                 <div class="project-container">
@@ -84,11 +84,8 @@ function buttonWrapper(event) {
                     </div>
                 </div>
             </div>
-        </Transition>
 
-        <Transition name="fade">
-
-            <div class="language" v-if='index == 1'>
+            <div class="language" v-else-if='index == 1'>
                 <h2>Javascript</h2>
                 <div class="project-container">
                     <div class="project">
@@ -133,11 +130,8 @@ function buttonWrapper(event) {
                     </div>
                 </div>
             </div>
-        </Transition>
 
-        <Transition name="fade">
-
-            <div class="language" v-if='index == 2'>
+            <div class="language" v-else-if='index == 2'>
                 <h2>Other</h2>
                 <div class="project-container">
                     <div class="project">
@@ -192,6 +186,16 @@ h1 {
     margin: 0 1rem 1rem 0;
     padding: 0.75rem 1rem;
     transition: all 350ms;
+}
+
+@media (prefers-color-scheme: light){
+    .project{
+        color: var(--background);
+    }
+
+    .project:hover{
+        color: var(--text);
+    }
 }
 
 .project h3 {
@@ -357,14 +361,16 @@ button:nth-of-type(3) {
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 350ms;
+    transition: all 350ms;
 }
 
-.fade-enter-active{
-    transition-delay: 200ms;
+.fade-enter-active, .fade-enter-from{
+    transition-delay:  250ms;
 }
 
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
-}</style>
+    transform: translateX(-100%);
+}
+</style>
