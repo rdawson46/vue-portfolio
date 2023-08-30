@@ -3,8 +3,54 @@
 <template>
     <div class="section">
         <h1>Skills</h1>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et animi recusandae provident iusto tenetur veritatis quae cupiditate quibusdam est odio obcaecati, repudiandae numquam iste, reprehenderit nemo vero iure. Sunt, labore!</li>
-        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et animi recusandae provident iusto tenetur veritatis quae cupiditate quibusdam est odio obcaecati, repudiandae numquam iste, reprehenderit nemo vero iure. Sunt, labore!</li>
+
+        <div class="field">
+            <h2>
+                Back End
+                <i class="fa-solid fa-server"></i>
+                <i class="fa-solid fa-database"></i>
+            </h2>
+            <ul>
+                <li>Python</li>
+                <li>Flask</li>
+                <li>Django</li>
+                <li>JavaScript</li>
+                <li>Express JS</li>
+                <li>PostgreSQL</li>
+            </ul>
+        </div>
+        <div class="field">
+            <h2>
+                Front End
+                <i class="fa-solid fa-desktop"></i>
+            </h2>
+            <ul>
+                <li>Vue</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>React</li>
+                <li>JQuery</li>
+            </ul>
+        </div>
+        <div class="field">
+            <h2>
+                Tools
+                <i class="fa-solid fa-terminal"></i>
+                <i class="fa-solid fa-code"></i>
+                <i class="fa-brands fa-connectdevelop"></i>
+                <i class="fa-solid fa-toolbox"></i>
+            </h2>
+            <ul>
+                <li>Windows</li>
+                <li>Linux</li>
+                <li>Terminal</li>
+                <li>CMD</li>
+                <li>Firebase</li>
+                <li>VS Code</li>
+                <li>Git</li>
+                <li>Chrome Dev Tools</li>
+            </ul>
+        </div>
     </div>
 </template>
 
