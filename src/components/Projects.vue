@@ -150,7 +150,7 @@ function buttonWrapper(event) {
 
                         <p>
                             Repository to track progress when learning a new language.
-                            Currently leanring Rust. Planning on learngin Go and Zig.
+                            Currently leanring Rust. Planning on learning Go and Zig.
                         </p>
 
                         <a href="">Github >></a>

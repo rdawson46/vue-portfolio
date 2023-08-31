@@ -1,66 +1,72 @@
-<script setup></script>
+<script setup>
+import Footer from './Footer.vue';
+
+</script>
 
 <template>
     <div class="section">
         <h1>Skills</h1>
 
-        <div class="field">
-            <h2>
-                Back End
-                <i class="fa-solid fa-server"></i>
-                <i class="fa-solid fa-database"></i>
-            </h2>
-            <ul>
-                <li>Python</li>
-                <li>Flask</li>
-                <li>Django</li>
-                <li>JavaScript</li>
-                <li>Express JS</li>
-                <li>PostgreSQL</li>
-            </ul>
+        <div class="container">
+
+            <div class="field">
+                <h2>
+                    <i class="fa-solid fa-server"></i>
+                    <!-- <i class="fa-solid fa-database"></i> -->
+                    Back End
+                </h2>
+                <ul>
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>Django</li>
+                    <li>JavaScript</li>
+                    <li>Express JS</li>
+                    <li>PostgreSQL</li>
+                </ul>
+            </div>
+            <div class="field">
+                <h2>
+                    <i class="fa-solid fa-desktop"></i>
+                    Front End
+                </h2>
+                <ul>
+                    <li>Vue</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>React</li>
+                    <li>JQuery</li>
+                </ul>
+            </div>
+            <div class="field">
+                <h2>
+                    <!-- <i class="fa-solid fa-terminal"></i> -->
+                    <i class="fa-solid fa-code"></i>
+                    <!-- <i class="fa-brands fa-connectdevelop"></i> -->
+                    <!-- <i class="fa-solid fa-toolbox"></i> -->
+                    Tools
+                </h2>
+                <ul>
+                    <li>Windows and Linux</li>
+                    <li>Terminal and CMD</li>
+                    <li>Firebase</li>
+                    <li>Git</li>
+                    <li>VS Code</li>
+                    <li>JetBrains IDE</li>
+                    <li>Chrome Dev Tools</li>
+                </ul>
+            </div>
         </div>
-        <div class="field">
-            <h2>
-                Front End
-                <i class="fa-solid fa-desktop"></i>
-            </h2>
-            <ul>
-                <li>Vue</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>React</li>
-                <li>JQuery</li>
-            </ul>
-        </div>
-        <div class="field">
-            <h2>
-                Tools
-                <i class="fa-solid fa-terminal"></i>
-                <i class="fa-solid fa-code"></i>
-                <i class="fa-brands fa-connectdevelop"></i>
-                <i class="fa-solid fa-toolbox"></i>
-            </h2>
-            <ul>
-                <li>Windows</li>
-                <li>Linux</li>
-                <li>Terminal</li>
-                <li>CMD</li>
-                <li>Firebase</li>
-                <li>VS Code</li>
-                <li>Git</li>
-                <li>Chrome Dev Tools</li>
-            </ul>
-        </div>
+
+        <Footer/>
     </div>
 </template>
 
 <style scoped>
-
-h1{
+h1 {
     color: var(--secondary);
 }
 
-.section{
+.section {
     background-color: var(--primary);
     margin: 25px 0 0 0;
     padding: 5px 25px 0 25px;
@@ -69,9 +75,33 @@ h1{
     height: fit-content;
 }
 
-@media (prefers-color-scheme: light){
-    .section{
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.field{
+    background-color: var(--background);
+    padding: 1rem 2rem;
+    border-radius: 1.75rem;
+    box-shadow: 0 0 0.5rem 0.25rem #182318;
+}
+
+.field i{
+    color: var(--accent);
+}
+
+@media (prefers-color-scheme: light) {
+    .section {
         color: var(--background);
     }
+}
+
+ul {
+    margin-bottom: 0;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
 }
 </style>
