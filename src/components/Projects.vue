@@ -182,10 +182,12 @@ h1 {
 
 .project {
     background-color: var(--primary);
-    border-radius: 8px;
+    border-radius: 1.75rem;
     margin: 0 1rem 1rem 0;
     padding: 0.75rem 1rem;
-    transition: all 350ms;
+    transition: all 450ms;
+    box-shadow: 0 0 0.5rem 0.25rem #182318;
+
 }
 
 @media (prefers-color-scheme: light){
@@ -336,7 +338,8 @@ button:hover::after {
 }
 
 button:nth-of-type(1) {
-    border-radius: 6px 0 0 6px;
+    /* border-radius: 6px 0 0 6px; */
+    border-radius: 1.75rem 0 0 1.75rem;
     border-top: 2px solid var(--primary);
     border-left: 2px solid var(--primary);
     border-bottom: 2px solid var(--primary);
@@ -348,7 +351,8 @@ button:nth-of-type(2) {
 }
 
 button:nth-of-type(3) {
-    border-radius: 0 6px 6px 0;
+    /* border-radius: 0 6px 6px 0; */
+    border-radius: 0 1.75rem 1.75rem 0;
     border-top: 2px solid var(--primary);
     border-right: 2px solid var(--primary);
     border-bottom: 2px solid var(--primary);

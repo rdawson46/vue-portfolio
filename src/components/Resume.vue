@@ -75,7 +75,8 @@ h1{
 }
 
 .box{
-    border-radius: 12px;
+    /* border-radius: 12px; */
+    border-radius: 1.75rem;
     padding: 20px;
     background-color: var(--background);
     /* height: 200px; */
