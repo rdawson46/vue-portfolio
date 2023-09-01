@@ -6,13 +6,12 @@ import Footer from './Footer.vue';
 <template>
     <div class="section">
         <h1>Skills</h1>
-
+        
         <div class="container">
 
             <div class="field">
                 <h2>
                     <i class="fa-solid fa-server"></i>
-                    <!-- <i class="fa-solid fa-database"></i> -->
                     Back End
                 </h2>
                 <ul>
@@ -39,10 +38,7 @@ import Footer from './Footer.vue';
             </div>
             <div class="field">
                 <h2>
-                    <!-- <i class="fa-solid fa-terminal"></i> -->
                     <i class="fa-solid fa-code"></i>
-                    <!-- <i class="fa-brands fa-connectdevelop"></i> -->
-                    <!-- <i class="fa-solid fa-toolbox"></i> -->
                     Tools
                 </h2>
                 <ul>

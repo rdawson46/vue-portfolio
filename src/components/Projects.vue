@@ -364,11 +364,11 @@ button:nth-of-type(3) {
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: all 350ms;
+    transition: all 250ms;
 }
 
 .fade-enter-active, .fade-enter-from{
-    transition-delay:  250ms;
+    transition-delay:  150ms;
 }
 
 .fade-enter-from,
