@@ -15,6 +15,6 @@
     right: 0;
     left: 0;
     background-color: var(--accent);
-    height: 60px;
+    height: 3.4rem;
 }
 </style>

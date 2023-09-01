@@ -62,10 +62,23 @@ h1{
     height: fit-content;
 }
 
+.section::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.25rem;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: var(--accent);
+}
+
 .grid{
     display: grid;
-    gap: 10px;
-    padding: 10px 50px 25px 50px;
+    /* gap: 10px; */
+    gap: 0.75rem;
+    /* padding: 10px 50px 25px 50px; */
+    padding: 0.75rem 3rem 1.5rem 3rem;
     /* grid-template-columns: 100px 100px 100px; */
     /* grid-template-columns: span 3; */
     /* grid-template-columns: 80px 80px 80px 80px 80px;
@@ -77,7 +90,8 @@ h1{
 .box{
     /* border-radius: 12px; */
     border-radius: 1.75rem;
-    padding: 20px;
+    /* padding: 20px; */
+    padding: 1.25rem;
     background-color: var(--background);
     /* height: 200px; */
     /* min-height: 20px; */
@@ -118,15 +132,18 @@ h1{
 }
 
 .title{
-    margin: 10px 0;
+    /* margin: 10px 0; */
+    margin: 0.5rem 0;
 }
 
 .sub-title{
-    margin: 10px 0;
+    /* margin: 10px 0; */
+    margin: 0.5rem 0;
 }
 
 .job-title{
-    margin: 5px 0;
+    /* margin: 5px 0; */
+    margin: 0.25rem;
 }
 
 a{

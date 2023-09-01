@@ -16,8 +16,8 @@ import Footer from './Footer.vue';
                     Back End
                 </h2>
                 <ul>
-                    <li>Python</li>
-                    <li>Flask</li>
+                    <li>Python <progress max="10" value="7"></progress></li>
+                    <li>Flask <progress max="10" value="7"></progress></li>
                     <li>Django</li>
                     <li>JavaScript</li>
                     <li>Express JS</li>
@@ -62,6 +62,11 @@ import Footer from './Footer.vue';
 </template>
 
 <style scoped>
+
+progress[value]{
+    /* background-color: red; */
+    fill: red;
+}
 h1 {
     color: var(--secondary);
 }
@@ -69,10 +74,22 @@ h1 {
 .section {
     background-color: var(--primary);
     margin: 25px 0 0 0;
-    padding: 5px 25px 0 25px;
+    padding: 5px 25px 3.4rem 25px;
+    /* padding-bottom: 3.4rem; */
     width: calc(100% - 50px);
     min-height: calc(100vh - 60px);
     height: fit-content;
+}
+
+.section::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.25rem;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: var(--accent);
 }
 
 .container{
@@ -97,7 +114,10 @@ h1 {
     padding: 0.75rem 1rem;
     transition: all 450ms;
     box-shadow: 0 0 0.5rem 0.25rem #182318;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
+
 
 .field i{
     color: var(--accent);
