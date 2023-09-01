@@ -77,14 +77,25 @@ h1 {
 
 .container{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.field{
+/* .field{
     background-color: var(--background);
     padding: 1rem 2rem;
     border-radius: 1.75rem;
+    box-shadow: 0 0 0.5rem 0.25rem #182318;
+} */
+
+/* project formatting applied to field */
+.field{
+    background-color: var(--background);
+    border-radius: 1.75rem;
+    margin: 0 1rem 1rem 0;
+    padding: 0.75rem 1rem;
+    transition: all 450ms;
     box-shadow: 0 0 0.5rem 0.25rem #182318;
 }
 
@@ -92,16 +103,28 @@ h1 {
     color: var(--accent);
 }
 
-@media (prefers-color-scheme: light) {
-    .section {
-        color: var(--background);
-    }
-}
-
 ul {
     margin-bottom: 0;
     list-style-type: none;
     padding: 0;
     text-align: center;
+}
+
+
+@media only screen and (max-width: 500px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .field{
+        width: 15rem;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .section {
+        color: var(--background);
+    }
 }
 </style>

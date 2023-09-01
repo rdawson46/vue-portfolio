@@ -164,6 +164,10 @@ nav li a{
         var(--secondary) 50%
         );
     }
+    .filledNav i{
+        color: var(--secondary)
+    }
+
 }
 nav li a:hover{
     background-position: 0;
@@ -231,6 +235,7 @@ nav li a:hover:before{
         text-align: center;
         padding: 0;
         transition: all 500ms;
+        opacity: .95;
     }
     
     nav ul li{
@@ -244,7 +249,18 @@ nav li a:hover:before{
     #check:checked ~ ul{
         left: 0;
     }
+
     
 }
 
+@media (prefers-color-scheme: light) and (max-width: 690px){
+    .filledNav li a{
+        background-image: linear-gradient(
+        to right,
+        var(--accent),
+        var(--accent) 50%,
+        var(--primary) 50%
+        );
+    }
+}
 </style>

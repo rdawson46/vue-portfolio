@@ -14,10 +14,6 @@ function buttonHandler(val, event) {
     event.target.classList.add('selected');
 }
 
-function buttonWrapper(event) {
-
-}
-
 </script>
 
 <template>
@@ -35,7 +31,7 @@ function buttonWrapper(event) {
                 <h2>Python</h2>
                 <div class="project-container">
                     <div class="project">
-                        <h3>Paper-Trader Back End</h3>
+                        <h3>Paper-Trader Back End <i class="fa-solid fa-star"></i></h3>
 
                         <p>
                             Built with Flask, PostgreSQL, SocketIO, and the Alpaca Trading API.
@@ -45,7 +41,7 @@ function buttonWrapper(event) {
                         <a href="">Github >></a>
                     </div>
                     <div class="project">
-                        <h3>Data Mine</h3>
+                        <h3>Data Mine <i class="fa-solid fa-star"></i></h3>
 
                         <p>
                             Runs with scheduled events to gather stock data, make ML models, makes predictions,
@@ -89,7 +85,7 @@ function buttonWrapper(event) {
                 <h2>Javascript</h2>
                 <div class="project-container">
                     <div class="project">
-                        <h3>Paper-Trader Front End</h3>
+                        <h3>Paper-Trader Front End <i class="fa-solid fa-star"></i></h3>
 
                         <p>
                             Front end was built using SocketIO to update prices when the user interacts with the app.
@@ -99,7 +95,7 @@ function buttonWrapper(event) {
                         <a href="">Github >></a>
                     </div>
                     <div class="project">
-                        <h3>Blockchain Coin-Flip</h3>
+                        <h3>Blockchain Coin-Flip <i class="fa-solid fa-star"></i></h3>
 
                         <p>
                             Project built with Vue.JS. Allows for users to sync MetaMask wallets and then wager on a coin
@@ -293,17 +289,20 @@ a:hover:before {
 button {
     flex: 1;
     position: relative;
-    padding: 1rem 2rem;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;  
     /* border: 2px solid #f2f2f2; */
     border: none;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
-    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1); */
     color: var(--text);
     background: transparent;
     overflow: hidden;
-    transition: all 350ms;
+    transition: all 300ms ease-out;
 }
 
 button::before,
