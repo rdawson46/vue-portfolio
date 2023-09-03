@@ -204,6 +204,16 @@ ul {
     padding: 0.75rem 1rem;
     border: 0.25rem solid var(--accent);
     box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45), inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
-    
+}
+
+@media (prefers-color-scheme: light){
+    .descr{
+        color: var(--text);
+    }
+
+    .major > li .icon{
+        background-color: var(--secondary);
+        color: var(--accent);
+    }
 }
 </style>

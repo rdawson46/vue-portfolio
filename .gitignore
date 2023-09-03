@@ -28,3 +28,5 @@ dist-ssr
 HelloWorld.vue
 README.md
 todo.todo
+.firebaserc
+firebase.json
