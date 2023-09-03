@@ -50,41 +50,30 @@ nav{
 }
 
 .clearNav{
-    /* height: 75px; */
     height: 4.25rem;
-    /* line-height: calc(75px/2); */
     line-height: calc(4.25rem/2);
     transition: all 250ms ease-in;
 }
 
 .filledNav{
     background-color: var(--primary);
-    /* height: 60px; */
     height: 3.4rem;
-    /* box-shadow: 0 0 25px 0 #181818; */
     box-shadow: 0 0 1.5rem 0 #181818;
-    /* line-height: 30px; */
     line-height: 1.7rem;
 }
 
 nav svg, nav i{
-    /* height: 30px; */
-    /* margin: 15px 30px; */
     fill: var(--text);
     transition: 250ms ease-in;
 }
 
 
 .clearNav svg, .clearNav i{
-    /* margin: calc(75px/4) calc(75px/2);
-    height: calc(75px/2); */
     margin: calc(4.25rem/4) calc(4.25rem/2);
     height: calc(4.25rem/2);
 }
 
 .filledNav svg, .filledNav i{
-    /* height: 30px;
-    margin: 15px 30px; */
     height: calc(3.4rem/2);
     font-size: calc(3.4rem/2);
     margin: calc(3.4rem/4) calc(3.4rem/2);
@@ -96,7 +85,6 @@ nav svg, nav i{
 }
 
 .filledNav ul{
-    /* margin-bottom: 0px; */
     margin-top: calc(3.4rem/4);
     margin-bottom: calc(3.4rem/4);
 }
@@ -107,15 +95,12 @@ nav svg:hover, i:hover{
 
 nav ul{
     float: right;
-    /* margin-right: 30px; */
     margin: 1rem 1.5rem 1rem 0;
     list-style: none;
 }
 
 nav ul li{
     display: inline-block;
-    /* margin: 0 20px; */
-    /* font-size: 20px; */
     margin: 0 1rem;
     font-size: 1.15rem;
     font-weight: bold;
@@ -177,22 +162,10 @@ nav li a:hover:before{
     width: 100%;
 }
 
-
-/* @media only screen and (max-width: 775px) { */
-    /* @media only screen and (max-width: 810px) {
-    nav ul li{
-        font-size: 18px;
-        margin: 0 10px;
-    }
-} */
-
 .checkbtn{
-    /* font-size: 30px; */
     font-size: 1.7rem;
     color: var(--text);
     float: right;
-    /* line-height: 60px; */
-    /* margin-right: 15px; */
     line-height: 3.75rem;
     margin-right: 1rem;
     cursor: pointer;
@@ -203,8 +176,7 @@ nav li a:hover:before{
     display: none;
 }
 
-/* @media only screen and (max-width: 650px){ */
-    @media only screen and (max-width: 690px){
+@media only screen and (max-width: 690px){
         .checkbtn{
             display: block;
         }

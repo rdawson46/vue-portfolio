@@ -31,7 +31,7 @@ function buttonHandler(val, event) {
                 <h2>Python</h2>
                 <div class="project-container">
                     <div class="project">
-                        <h3>Paper-Trader Back End <i class="fa-solid fa-star"></i></h3>
+                        <h3>Paper-Trader Back-End <i class="fa-solid fa-star"></i></h3>
 
                         <p>
                             Built with Flask, PostgreSQL, SocketIO, and the Alpaca Trading API.
@@ -85,7 +85,7 @@ function buttonHandler(val, event) {
                 <h2>Javascript</h2>
                 <div class="project-container">
                     <div class="project">
-                        <h3>Paper-Trader Front End <i class="fa-solid fa-star"></i></h3>
+                        <h3>Paper-Trader Front-End <i class="fa-solid fa-star"></i></h3>
 
                         <p>
                             Front end was built using SocketIO to update prices when the user interacts with the app.
