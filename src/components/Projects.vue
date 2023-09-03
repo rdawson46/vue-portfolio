@@ -38,7 +38,7 @@ function buttonHandler(val, event) {
                             Allows for users to make accounts and make stocks trades with paper money.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/rdawson46/paper-trading">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Data Mine <i class="fa-solid fa-star"></i></h3>
@@ -48,7 +48,7 @@ function buttonHandler(val, event) {
                             and manages a portfolio. Then uses a Flask app to host a dashboard to track progress.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/crooksryan/data-mine">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Pi-Daily Email</h3>
@@ -57,7 +57,7 @@ function buttonHandler(val, event) {
                             Uses multiple APIs to format an email every day to send useful information to a list of users.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/rdawson46/pi-daily-email">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Social Media App</h3>
@@ -67,7 +67,7 @@ function buttonHandler(val, event) {
                             feed.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/crooksryan/social-media">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Chat App</h3>
@@ -76,7 +76,7 @@ function buttonHandler(val, event) {
                             Uses a Flask app and SocketIO for users to send group messages in real time.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/rdawson46/chatApp">Github >></a>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@ function buttonHandler(val, event) {
                             Used JQuery on some pages to simplify development process.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/rdawson46/paper-trading">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Blockchain Coin-Flip <i class="fa-solid fa-star"></i></h3>
@@ -103,7 +103,7 @@ function buttonHandler(val, event) {
                             It is a winner take all. Smart contract was made with Solidity.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/crooksryan/blockchain-coin">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Chat App</h3>
@@ -113,7 +113,7 @@ function buttonHandler(val, event) {
                             Then uses vanilla JS to manipulate the DOM.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/rdawson46/chatApp">Github >></a>
                     </div>
                     <div class="project">
                         <h3>This Website</h3>
@@ -122,7 +122,7 @@ function buttonHandler(val, event) {
                             This site is built using Vue.JS and hosted on Firebase and utilizes other Firebase tools.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/crooksryan/vue-portfolio">Github >></a>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@ function buttonHandler(val, event) {
                         </p>
 
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/rdawson46/CourseScheduler">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Language Learning</h3>
@@ -149,7 +149,7 @@ function buttonHandler(val, event) {
                             Currently leanring Rust. Planning on learning Go and Zig.
                         </p>
 
-                        <a href="">Github >></a>
+                        <a href="https://github.com/crooksryan/language-learning">Github >></a>
                     </div>
                 </div>
             </div>
