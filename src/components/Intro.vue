@@ -68,7 +68,7 @@ onMounted(()=>{
     height: 100vh;
     position: absolute;
     z-index: -1;
-    background-image: url('./../assets/mountain.webp');
+    /* background-image: url('./../assets/blob-scene-kaikei.svg'); */
     background-size: cover;
     background-position: center;
     opacity: 0.45;
