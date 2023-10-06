@@ -91,13 +91,13 @@ onMounted(()=>{
 
 .hidden{
   opacity: 0%;
-  filter: blur(5px);
+  filter: blur(5px) brightness(0);
   transition: all 650ms ease-in-out;
 }
 
 .show{
   opacity: 100%;
-  filter: blur(0);
+  filter: blur(0) brightness(1);
 }
 
 </style>

@@ -78,7 +78,7 @@ import Footer from './Footer.vue';
                 </div>
             </li>
         </ul>
-        <Footer/>
+        <!-- <Footer/> -->
     </div>
 </template>
 

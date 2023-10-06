@@ -1,48 +1,50 @@
 <script setup>
-import { onMounted } from 'vue';
+import Terminal from './Terminal.vue';
+import { onMounted, ref } from 'vue';
+
+const svg = ref(false);
+const always = ref(true);
+
 
 onMounted(()=>{
-    let letters = "ABCDDEFGHIJKLMNOPQRSTUVWXYZ";
-    const header = document.getElementById('name')
-    let phrase = header.innerHTML;
+    const blanket = document.getElementById('blanket');
 
-    // shuffle immediately
-    header.innerHTML = header.innerHTML.split('')
-            .map(letter => letters[Math.floor(Math.random() * 26)])
-            .join('');
+    setTimeout(()=>{
+        svg.value = true;
 
-    let iterations = 0;
-
-    // iterate and shuffle each letter twice then revealing number and going to next
-    const interval = setInterval(() =>{
-        header.innerHTML = header.innerHTML.split('')
-            .map((letter, index) => {
-                if (index < iterations){
-                    return phrase[index];
-                }
-
-                return letters[Math.floor(Math.random() * 26)]
-            })
-            .join('');
-        
-        if(iterations >= phrase.length) clearInterval(interval);
-
-        iterations += 1/2;
-    }, 50);
+        blanket.classList.add('clear');
+    }, 1750);
 });
+
 </script>
 
 <template>
     <div class="background">
-        <div>
+        <div id="blanket" class="cover"></div>
+        <!-- <div>
             <h1 id="name">Ryan Crooks</h1>
             <h2>Developer</h2>
-        </div>
+        </div> -->
+        <Terminal/>
     </div>
 </template>
 
 <style scoped>
+.cover{
+    width: 100%;
+    height: 100%;
+    /* background-color: #272727; */
+    background-color: var(--background);
+    position: absolute;
+    z-index: -1;
+    transition: all 750ms;
+}
+
+.clear{
+    background-color: transparent;
+}
 .background{
+    /* opacity: 0; */
     display: flex;
     place-items: center;
     justify-content: center;
@@ -52,15 +54,6 @@ onMounted(()=>{
     height: 100vh;
 }
 
-.background div{
-    text-align: center;
-    background-color: var(--text);
-    color: var(--primary);
-    padding: 15px 45px;
-    border-radius: 12px;
-    opacity: 0.80;
-    box-shadow: 0 0 12px 8px #343434;
-}
 
 .background::before{
     content: "";
@@ -68,11 +61,11 @@ onMounted(()=>{
     height: 100vh;
     position: absolute;
     z-index: -1;
-    /* background-image: url('./../assets/blob-scene-kaikei.svg'); */
+    background-image: url('./../assets/blob-scene-haikei.svg'); 
     background-size: cover;
     background-position: center;
-    opacity: 0.45;
-    filter: grayscale(100%);
+    opacity: 0.75;
+    /* filter: grayscale(100%); */
 }
 
 h1{
