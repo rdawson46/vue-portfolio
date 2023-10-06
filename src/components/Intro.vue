@@ -64,7 +64,7 @@ onMounted(()=>{
     background-image: url('./../assets/blob-scene-haikei.svg'); 
     background-size: cover;
     background-position: center;
-    opacity: 0.75;
+    /* opacity: 0.75; */
     /* filter: grayscale(100%); */
 }
 

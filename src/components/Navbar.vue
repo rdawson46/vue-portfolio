@@ -158,6 +158,23 @@ nav li a{
     }
     
 @media (prefers-color-scheme: light){
+    .clearNav svg{
+        fill: var(--accent);
+    }
+
+    .clearNav i{
+        color: var(--accent);
+    }
+
+    .clearNav li a{
+        background-image: linear-gradient(
+        to right,
+        var(--accent),
+        var(--accent) 50%,
+        var(--accent) 50%
+        );
+    }
+
     .filledNav svg{
         fill: var(--secondary);
     }
