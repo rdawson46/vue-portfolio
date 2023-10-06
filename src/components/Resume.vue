@@ -6,7 +6,7 @@
         <div class="grid">
             <div class="box two">
                 <h2 class="title">Education</h2>
-                <h4 class="sub-title">Pennsylvania State University</h4>
+                <h3 class="sub-title">Pennsylvania State University</h3>
                 <ul>
                     <li>Computer Science, B.S.</li>
                     <li>Expected Graduation: May 2024</li>
@@ -35,8 +35,8 @@
             </div>
             <div class="box four">
                 <h2 class="title">Experience</h2>
-                <h4 class="sub-title">BNY Mellon</h4>
-                <h5 class="job-title">START Intern Program, Data Science</h5>
+                <h3 class="sub-title">BNY Mellon</h3>
+                <h4 class="job-title">START Intern Program, Data Science</h4>
                 <ul>
                     <li>Used open source projects to leverage generative AI</li>
                     <li>Wrote a research paper on embedding vectors and presented to a team of engineers</li>

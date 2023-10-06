@@ -45,9 +45,9 @@ onMounted(()=>{
     <div class="terminal">
         <div class="terminal-toolbar">
             <div class="butt">
-                <button class="btn btn-color"></button>
-                <button class="btn"></button>
-                <button class="btn"></button>
+                <div class="btn btn-color"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
             </div>
             <p class="user">ryancrooks@admin: ~</p>
             <div class="add-tab">+</div>
