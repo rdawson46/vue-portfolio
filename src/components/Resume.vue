@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const exp_ind = ref(0);
+
+
+</script>
 
 <template>
     <div class="section">
@@ -35,86 +41,104 @@
             </div>
             <div class="box four">
                 <h2 class="title">Experience</h2>
-                <h3 class="sub-title">BNY Mellon</h3>
-                <h4 class="job-title">START Intern Program, Data Science</h4>
-                <ul>
-                    <li>Used open source projects to leverage generative AI</li>
-                    <li>Wrote a research paper on embedding vectors and presented to a team of engineers</li>
-                    <li>Developed an API to convert text data into a structured data object</li>
-                </ul>
+
+                <!-- <button v-if='exp_ind < 1' @click='exp_ind++' class='right-arrow'>&gt</button>-->
+
+                <Transition name='fade' mode='out-in'>
+                    <div v-if='exp_ind == 0'>
+                        <h3 class="sub-title">BNY Mellon</h3>
+                        <h4 class="job-title">START Intern Program, Data Science</h4>
+                        <ul>
+                            <li>Used open source projects to leverage generative AI</li>
+                            <li>Wrote a research paper on embedding vectors and presented to a team of engineers</li>
+                            <li>Developed an API to convert text data into a structured data object</li>
+                        </ul>
+                    </div>
+                    <div v-else-if='exp_ind == 1'>
+                        <h3 class="sub-title">BNY Mellon</h3>
+                        <h4 class="job-title"> Data Science Analyst Program</h4>
+                        <ul>
+                            <li>Starting August 2024</li> 
+                            <li>Full time program focused on development</li>
+                        </ul>
+                    </div>
+                </Transition>
+                <div class="btn-holder">
+                    <button class="btn" :class="{ active: exp_ind == 0 }" @click="exp_ind=0"></button>
+                    <button class="btn" :class="{ active: exp_ind == 1 }" @click="exp_ind=1"></button>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+.btn-holder{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    background-color: var(--secondary);
+    height: 1rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin: 0 0.5rem;
+}
+
+.btn:hover{
+    background-color: var(--accent);
+    box-shadow: 0px 15px 20px rgba(162, 206, 234, 0.9);
+    transform: translateY(-3px);
+}
+
+.active{
+    background-color: var(--accent);
+}
 
 h1{
-    color: var(--secondary);
+    color: var(--accent);
 }
 
 .section{
-    background-color: var(--primary);
     margin: 25px 0;
-    padding: 5px 25px 0 25px;
-    width: calc(100% - 50px);
+    /*padding: 5px 25px 0 25px;*/
+    /*width: calc(100% - 50px);*/
     min-height: calc(100vh - 60px);
     height: fit-content;
 }
 
-.section::before{
-    content: "";
-    display: block;
-    position: absolute;
-    height: 0.25rem;
-    left: 0;
-    top: 0;
-    right: 0;
-    background: var(--accent);
-}
-
 .grid{
     display: grid;
-    /* gap: 10px; */
-    gap: 0.75rem;
-    /* padding: 10px 50px 25px 50px; */
-    padding: 0.75rem 3rem 1.5rem 3rem;
-    /* grid-template-columns: 100px 100px 100px; */
-    /* grid-template-columns: span 3; */
-    /* grid-template-columns: 80px 80px 80px 80px 80px;
-    grid-template-rows: 100px 100px;
-    background-color: red;
-    justify-content: space-around; */
+    gap: 1.5rem;
+    padding: 0.75rem 12.5rem 1.5rem 12.5rem;
 }
 
 .box{
-    /* border-radius: 12px; */
-    border-radius: 1.75rem;
-    /* padding: 20px; */
-    padding: 1.25rem;
-    background-color: var(--background);
-    /* height: 200px; */
-    /* min-height: 20px; */
-    /* height: fit-content; */
+    border-radius: 1.5rem;
+    padding: 1rem;
+    background-color: var(--primary);
 }
 
 .one{
-    /* grid-column-start: 1;
-    grid-column-end: 5; */
-    grid-column: 1/3;
+    grid-column: 2;
     grid-row: 1;
 }
 
 .two{
-    grid-column: 3;
+    grid-column: 1;
     grid-row: 1;
     background-color: var(--secondary);
-    
 }
 
 .three{
-    grid-column: 1;
-    grid-row: 2;
+    grid-column: 3;
+    grid-row: 1;
     background-color: var(--accent);
     color: var(--secondary)
 }
@@ -122,27 +146,31 @@ h1{
 @media (prefers-color-scheme: light){
     .three{
         color: var(--background)
+    }
 
+    .grid{
+        color: var(--background);
+    }
+
+    .two{
+        color: var(--primary);
     }
 }
 
 .four{
-    grid-column: 2/4;
+    grid-column: 1/4;
     grid-row: 2;
 }
 
 .title{
-    /* margin: 10px 0; */
     margin: 0.5rem 0;
 }
 
 .sub-title{
-    /* margin: 10px 0; */
     margin: 0.5rem 0;
 }
 
 .job-title{
-    /* margin: 5px 0; */
     margin: 0.25rem;
 }
 
@@ -185,7 +213,7 @@ a:hover:before{
 }
 
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 680px) {
     .grid{
         padding: 10px 25px 25px 25px;
     }
@@ -209,5 +237,19 @@ a:hover:before{
     .four{
         grid-row: 4;
     }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 250ms;
+}
+
+.fade-enter-active, .fade-enter-from{
+    transition-delay:  150ms;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>

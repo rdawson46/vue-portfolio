@@ -21,10 +21,6 @@ onMounted(()=>{
 <template>
     <div class="background">
         <div id="blanket" class="cover"></div>
-        <!-- <div>
-            <h1 id="name">Ryan Crooks</h1>
-            <h2>Developer</h2>
-        </div> -->
         <Terminal/>
     </div>
 </template>
@@ -33,7 +29,6 @@ onMounted(()=>{
 .cover{
     width: 100%;
     height: 100%;
-    /* background-color: #272727; */
     background-color: var(--background);
     position: absolute;
     z-index: -1;
@@ -43,8 +38,8 @@ onMounted(()=>{
 .clear{
     background-color: transparent;
 }
+
 .background{
-    /* opacity: 0; */
     display: flex;
     place-items: center;
     justify-content: center;
@@ -54,18 +49,15 @@ onMounted(()=>{
     height: 100vh;
 }
 
-
 .background::before{
     content: "";
     width: 100%;
     height: 100vh;
     position: absolute;
     z-index: -1;
-    background-image: url('./../assets/blob-scene-haikei.svg'); 
+    background-image: url('./../assets/low-poly-grid-haikei.svg'); 
     background-size: cover;
     background-position: center;
-    /* opacity: 0.75; */
-    /* filter: grayscale(100%); */
 }
 
 h1{

@@ -6,7 +6,6 @@
 
         <div class="container">
             <div class="image-holder">
-                <!-- <img src="https://media.licdn.com/dms/image/D4E03AQEKfQyiXBdfHw/profile-displayphoto-shrink_400_400/0/1689212721004?e=1698278400&v=beta&t=TCdtdXYey7nsPEf9Pd2f-03Mv0GpUiJdARVDQDeQ3J4" alt="me"> -->
                 <i class="fa-solid fa-rocket"></i>
             </div>
             <div class="text-holder">
@@ -21,7 +20,6 @@
                 </p>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -37,18 +35,14 @@ h1{
 
 .section{
     margin: 25px 0;
-    padding: 0 25px;
-    width: calc(100% - 50px);
     min-height: calc(100vh - 60px);
     height: fit-content;
-        /* display: flex;
-        justify-content: center;
-        flex-direction: column; */
 }
 
 .container{
     display: flex;
-
+    padding-left: 7rem;
+    padding-right: 7rem;
 }
 
 .image-holder{
@@ -58,7 +52,7 @@ h1{
     flex-direction: column;
     place-items: center;
     text-align: center;
-    margin: 0 30px;
+    margin: 0 15px;
 }
 
 .text-holder{
@@ -72,7 +66,7 @@ h1{
 }
 
 img{
-    width: 12.5rem;
+    width: 10rem;
     aspect-ratio: 1;
     border-radius: 50%;
     border: 2px solid #343434;
@@ -81,8 +75,8 @@ img{
 
 i{
     aspect-ratio: 1;
-    font-size: 12.5rem;
-    border: 1rem solid var(--primary);
+    font-size: 10rem;
+    border: 0.5rem solid var(--primary);
     border-radius: 50%;
     padding: 2.5rem;
     color: var(--accent);

@@ -110,7 +110,7 @@ nav svg, nav i{
 }
 
 nav svg:hover, i:hover{
-    fill: var(--accent)
+    fill: var(--secondary)
 }
 
 nav ul{
@@ -131,8 +131,8 @@ nav ul li{
 nav li a{
     background-image: linear-gradient(
         to right,
-        var(--accent),
-        var(--accent) 50%,
+        var(--secondary),
+        var(--secondary) 50%,
         var(--text) 50%
         );
     background-size: 200% 100%;
@@ -147,7 +147,7 @@ nav li a{
     
     nav li a:before{
         content: '';
-        background: var(--accent);
+        background: var(--secondary);
         display: block;
         position: absolute;
         bottom: -3px;
@@ -159,7 +159,7 @@ nav li a{
     
 @media (prefers-color-scheme: light){
     .clearNav svg{
-        fill: var(--accent);
+        fill: var(--background);
     }
 
     .clearNav i{
@@ -169,9 +169,9 @@ nav li a{
     .clearNav li a{
         background-image: linear-gradient(
         to right,
-        var(--accent),
-        var(--accent) 50%,
-        var(--accent) 50%
+        var(--secondary),
+        var(--secondary) 50%,
+        var(--background) 50%
         );
     }
 

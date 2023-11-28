@@ -1,19 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-
-
 const index = ref(0);
-
-function buttonHandler(val, event) {
-    index.value = val;
-
-    document.querySelectorAll('.selected').forEach(element => {
-        element.classList.remove('selected')
-    })
-
-    event.target.classList.add('selected');
-}
-
 </script>
 
 <template>
@@ -21,14 +8,13 @@ function buttonHandler(val, event) {
         <h1>Projects</h1>
 
         <div class="button-holder">
-            <button @click="buttonHandler(0, $event)" class="selected">Python</button>
-            <button @click="buttonHandler(1, $event)">Javascript</button>
-            <button @click="buttonHandler(2, $event)">Other</button>
+            <button @click="index=0" :class="{ selected: index == 0 }">Python</button>
+            <button @click="index=1" :class="{ selected: index == 1 }">Javascript</button>
+            <button @click="index=2" :class="{ selected: index == 2 }">Other</button>
         </div>
 
         <Transition name="fade" mode="out-in">
             <div class="language" v-if='index == 0'>
-                <h2>Python</h2>
                 <div class="project-container">
                     <div class="project">
                         <h3>Paper-Trader Back-End <i class="fa-solid fa-star"></i></h3>
@@ -82,7 +68,6 @@ function buttonHandler(val, event) {
             </div>
 
             <div class="language" v-else-if='index == 1'>
-                <h2>Javascript</h2>
                 <div class="project-container">
                     <div class="project">
                         <h3>Paper-Trader Front-End <i class="fa-solid fa-star"></i></h3>
@@ -128,7 +113,6 @@ function buttonHandler(val, event) {
             </div>
 
             <div class="language" v-else-if='index == 2'>
-                <h2>Other</h2>
                 <div class="project-container">
                     <div class="project">
                         <h3>Course Scheduler</h3>
@@ -165,15 +149,17 @@ h1 {
 
 .section {
     margin: 25px 0;
-    padding: 0 25px;
-    width: calc(100% - 50px);
+    /*padding: 0 25px;*/
+    /*width: calc(100% - 50px);*/
     min-height: calc(100vh - 60px);
     height: fit-content;
 }
 
 .project-container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    padding: 1rem 7rem;
 }
 
 .project {
@@ -182,8 +168,7 @@ h1 {
     margin: 0 1rem 1rem 0;
     padding: 0.75rem 1rem;
     transition: all 450ms;
-    box-shadow: 0 0 0.5rem 0.25rem #182318;
-
+    box-shadow: 0 0 0.5rem 0.25rem #182318df;
 }
 
 @media (prefers-color-scheme: light){
@@ -203,7 +188,7 @@ h1 {
 
 @media only screen and (min-width: 650px) {
     .project {
-        width: 15rem;
+        width: 18rem;
     }
 
     .project-container:hover .project:hover {
@@ -213,12 +198,6 @@ h1 {
         scale: 115%;
         z-index: 10;
     }
-
-    /* .project-container:hover .project{ */
-    /* filter: brightness(45%) grayscale(100%); */
-    /* box-shadow: 0 0 4px 1px #888888;  */
-    /* scale: 90%;  */
-    /* } */
 }
 
 @media only screen and (max-width: 300px) {
@@ -268,21 +247,25 @@ a:hover:before {
 }
 
 @media (prefers-color-scheme: light) {
-    .filledNav svg {
-        fill: var(--secondary);
+    .project a {
+        background-image: linear-gradient(to right,
+            var(--accent),
+            var(--accent) 50%,
+            var(--secondary) 50%);
     }
 
-    .filledNav li a {
+    .project:hover a {
         background-image: linear-gradient(to right,
-                var(--accent),
-                var(--accent) 50%,
-                var(--secondary) 50%);
+            var(--accent),
+            var(--accent) 50%,
+            var(--primary) 50%);
     }
 }
 
 .button-holder {
     display: flex;
     justify-content: space-between;
+    padding: 0.5rem 7rem;
     align-items: center;
 }
 
@@ -374,6 +357,6 @@ button:nth-of-type(3) {
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
 </style>

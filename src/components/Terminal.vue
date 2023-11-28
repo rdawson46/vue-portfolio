@@ -144,7 +144,7 @@ onMounted(()=>{
 }
 
 .terminal-body {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     height: calc(100% - 30px);
     padding-top: 2px;
     margin-top: -1px;
