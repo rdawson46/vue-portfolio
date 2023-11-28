@@ -48,10 +48,6 @@ onMounted(()=>{
   </div>
 </template>
 
-<script>
-
-</script>
-
 <style scoped>
 
 #blob{
