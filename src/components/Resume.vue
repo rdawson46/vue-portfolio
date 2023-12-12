@@ -42,8 +42,6 @@ const exp_ind = ref(0);
             <div class="box four">
                 <h2 class="title">Experience</h2>
 
-                <!-- <button v-if='exp_ind < 1' @click='exp_ind++' class='right-arrow'>&gt</button>-->
-
                 <Transition name='fade' mode='out-in'>
                     <div v-if='exp_ind == 0'>
                         <h3 class="sub-title">BNY Mellon</h3>

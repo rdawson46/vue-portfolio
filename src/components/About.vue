@@ -62,6 +62,12 @@ h1{
 @media only screen and (max-width: 690px) {
     .container{
         flex-direction: column;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .text-holder{
+        margin: 0 5px;
     }
 }
 

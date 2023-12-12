@@ -200,17 +200,6 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 300px) {
-    .project-container {
-        flex-direction: column;
-    }
-
-    .project {
-        margin: 1rem 0;
-    }
-}
-
-
 a {
     background-image: linear-gradient(to right,
             var(--accent),
@@ -359,4 +348,23 @@ button:nth-of-type(3) {
     opacity: 0;
     transform: translateX(100%);
 }
+
+@media only screen and (max-width: 650px) {
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project {
+        margin: 1rem 0;
+    }
+
+    .project-container {
+        padding: 1rem 3rem;
+    }
+
+    .button-holder {
+        padding: 0.5rem 2rem;
+    }
+}
+
 </style>
