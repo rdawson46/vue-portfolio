@@ -105,8 +105,6 @@ h1{
 
 .section{
     margin: 25px 0;
-    /*padding: 5px 25px 0 25px;*/
-    /*width: calc(100% - 50px);*/
     min-height: calc(100vh - 60px);
     height: fit-content;
 }
@@ -141,6 +139,11 @@ h1{
     color: var(--secondary)
 }
 
+.four{
+    grid-column: 1/4;
+    grid-row: 2;
+}
+
 @media (prefers-color-scheme: light){
     .three{
         color: var(--background)
@@ -155,10 +158,6 @@ h1{
     }
 }
 
-.four{
-    grid-column: 1/4;
-    grid-row: 2;
-}
 
 .title{
     margin: 0.5rem 0;
@@ -210,8 +209,36 @@ a:hover:before{
     width: 100%;
 }
 
+@media only screen and (max-width: 1050px) {
+    .grid{
+        padding: 0.75rem 6.25rem 1.5rem 6.25rem;
+    }
 
-@media only screen and (max-width: 680px) {
+    .two, .three, .four{
+        grid-column: 1;
+    }
+
+    .one{
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+
+    .two{
+        grid-row: 1;
+    }
+
+    .three{
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .four{
+        grid-row: 3;
+        grid-column: 1/3;
+    }
+}
+
+@media only screen and (max-width: 780px) {
     .grid{
         padding: 10px 25px 25px 25px;
     }

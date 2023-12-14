@@ -349,17 +349,26 @@ button:nth-of-type(3) {
     transform: translateX(100%);
 }
 
+@media only screen and (max-width: 900px) {
+    .project-container{
+        padding: 1rem 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .project-container{
+        padding: 1rem 1.75rem;
+    }
+}
+
 @media only screen and (max-width: 650px) {
     .project-container {
         flex-direction: column;
+        padding: 1rem 3rem;
     }
 
     .project {
         margin: 1rem 0;
-    }
-
-    .project-container {
-        padding: 1rem 3rem;
     }
 
     .button-holder {

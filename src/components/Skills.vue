@@ -57,7 +57,7 @@ h1 {
 
 .section {
     /*background-color: var(--primary);*/
-    margin: 25px 0 0 0;
+    margin: 25px 0 25px 0;
     /*padding: 5px 25px 4rem 25px;*/
     /*width: calc(100% - 50px);*/
     min-height: calc(100vh - 60px);

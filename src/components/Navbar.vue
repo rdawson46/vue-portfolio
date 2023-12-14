@@ -16,14 +16,27 @@ onMounted(()=>{
 
     const upper = document.querySelectorAll('.upper');
 
-    setTimeout(()=>{
-        let count = 0;
-        const interval = setInterval(()=>{
-            upper[count].classList.remove('upper');
-            count++;
-            if(count === upper.length) clearInterval(interval);
-        }, 125);
-    }, 2000);
+    let height = window.pageYOffset
+
+    if (height < 200){
+        setTimeout(()=>{
+            let count = 0;
+            const interval = setInterval(()=>{
+                upper[count].classList.remove('upper');
+                count++;
+                if(count === upper.length) clearInterval(interval);
+            }, 125);
+        }, 2000);
+    } else {
+        setTimeout(()=>{
+            let count = 0;
+            const interval = setInterval(()=>{
+                upper[count].classList.remove('upper');
+                count++;
+                if(count === upper.length) clearInterval(interval);
+            }, 125);
+        }, 200);
+    }
 
 });
 </script>
@@ -145,17 +158,17 @@ nav li a{
     transition: all 0.3 ease-in-out;
     }
     
-    nav li a:before{
-        content: '';
-        background: var(--secondary);
-        display: block;
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        width: 0;
-        height: 3px;
-        transition: all 0.3s ease-in-out;
-    }
+nav li a:before{
+    content: '';
+    background: var(--secondary);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
     
 @media (prefers-color-scheme: light){
     .clearNav svg{

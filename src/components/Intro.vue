@@ -60,6 +60,7 @@ onMounted(()=>{
     background-position: center;
 }
 
+
 h1{
     font-size: 48px;
     margin-bottom: 0;

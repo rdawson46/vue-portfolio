@@ -32,7 +32,21 @@ p{
 h1{
     color: var(--accent)
 }
-
+/*
+.section::before{
+    content: '';
+    height: 10px;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(
+        139deg, #fb8817, #ff4b01,
+        #c12127, #e02aff
+        );
+    position: absolute;
+    display: block;
+    top: -30px;
+}
+*/
 .section{
     margin: 25px 0;
     min-height: calc(100vh - 60px);
@@ -59,7 +73,7 @@ h1{
     margin: 0 30px;
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 850px) {
     .container{
         flex-direction: column;
         padding-left: 3rem;
