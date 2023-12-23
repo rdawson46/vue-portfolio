@@ -24,7 +24,7 @@ const index = ref(0);
                             Allows for users to make accounts and make stocks trades with paper money.
                         </p>
 
-                        <a href="https://github.com/rdawson46/paper-trading">Github >></a>
+                        <a href="https://github.com/rdawson46/paper-trading" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Data Mine <i class="fa-solid fa-star"></i></h3>
@@ -34,7 +34,7 @@ const index = ref(0);
                             and manages a portfolio. Then uses a Flask app to host a dashboard to track progress.
                         </p>
 
-                        <a href="https://github.com/crooksryan/data-mine">Github >></a>
+                        <a href="https://github.com/rdawson46/data-mine" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Pi-Daily Email</h3>
@@ -43,7 +43,7 @@ const index = ref(0);
                             Uses multiple APIs to format an email every day to send useful information to a list of users.
                         </p>
 
-                        <a href="https://github.com/rdawson46/pi-daily-email">Github >></a>
+                        <a href="https://github.com/rdawson46/pi-daily-email" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Social Media App</h3>
@@ -53,7 +53,7 @@ const index = ref(0);
                             feed.
                         </p>
 
-                        <a href="https://github.com/crooksryan/social-media">Github >></a>
+                        <a href="https://github.com/rdawson46/social-media" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Chat App</h3>
@@ -62,7 +62,7 @@ const index = ref(0);
                             Uses a Flask app and SocketIO for users to send group messages in real time.
                         </p>
 
-                        <a href="https://github.com/rdawson46/chatApp">Github >></a>
+                        <a href="https://github.com/rdawson46/chatApp" target="_blank">Github >></a>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@ const index = ref(0);
                             Used JQuery on some pages to simplify development process.
                         </p>
 
-                        <a href="https://github.com/rdawson46/paper-trading">Github >></a>
+                        <a href="https://github.com/rdawson46/paper-trading" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Blockchain Coin-Flip <i class="fa-solid fa-star"></i></h3>
@@ -88,7 +88,7 @@ const index = ref(0);
                             It is a winner take all. Smart contract was made with Solidity.
                         </p>
 
-                        <a href="https://github.com/crooksryan/blockchain-coin">Github >></a>
+                        <a href="https://github.com/rdawson46/blockchain-coin" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Chat App</h3>
@@ -98,7 +98,7 @@ const index = ref(0);
                             Then uses vanilla JS to manipulate the DOM.
                         </p>
 
-                        <a href="https://github.com/rdawson46/chatApp">Github >></a>
+                        <a href="https://github.com/rdawson46/chatApp" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>This Website</h3>
@@ -107,13 +107,48 @@ const index = ref(0);
                             This site is built using Vue.JS and hosted on Firebase and utilizes other Firebase tools.
                         </p>
 
-                        <a href="https://github.com/crooksryan/vue-portfolio">Github >></a>
+                        <a href="https://github.com/rdawson46/vue-portfolio" target="_blank">Github >></a>
                     </div>
                 </div>
             </div>
 
             <div class="language" v-else-if='index == 2'>
                 <div class="project-container">
+                    <div class="project">
+                        <h3>Hover Mark</h3>
+
+                        <p>
+                            Neovim plugin written in Lua. Helps display marks in Neovim buffers to help make using marks easier to use.
+                        </p>
+
+                        <a href="https://github.com/rdawson46/hover_mark.nvim" target="_blank">Github >></a>
+                    </div>
+                    <div class="project">
+                        <h3>Rust Listener</h3>
+
+                        <p>
+                            Project written in Rust to track actions within a current folder or directory. Currently a work in progess, but will be
+                            use to track and automate git actions.
+                        </p>
+
+                        <a href="https://github.com/rdawson46/rust-listener" target="_blank">Github >></a>
+                    </div>
+                    <div class="project">
+                        <h3>Rust Back End</h3>
+
+                        <p>
+                            Social media site written with Rust and React. More of a back end project with using Rust and Postgres.
+                        </p>
+
+                        <a href="https://github.com/rdawson46/musical-waffle" target="_blank">Github >></a>
+                    </div>
+                    <div class="project">
+                        <h3>MinSQL</h3>
+
+                        <p>Simple SQL database written in C. Allows users to insert and query data from the terminal.</p>
+
+                        <a href="https://github.com/rdawson46/minSQL" target="_blank">Github >></a>
+                    </div>
                     <div class="project">
                         <h3>Course Scheduler</h3>
 
@@ -123,7 +158,7 @@ const index = ref(0);
                         </p>
 
 
-                        <a href="https://github.com/rdawson46/CourseScheduler">Github >></a>
+                        <a href="https://github.com/rdawson46/CourseScheduler" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Language Learning</h3>
@@ -133,7 +168,7 @@ const index = ref(0);
                             Currently leanring Rust. Planning on learning Go and Zig.
                         </p>
 
-                        <a href="https://github.com/crooksryan/language-learning">Github >></a>
+                        <a href="https://github.com/rdawson46/language-learning" target="_blank">Github >></a>
                     </div>
                 </div>
             </div>
