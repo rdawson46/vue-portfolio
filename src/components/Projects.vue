@@ -115,13 +115,23 @@ const index = ref(0);
             <div class="language" v-else-if='index == 2'>
                 <div class="project-container">
                     <div class="project">
-                        <h3>Hover Mark</h3>
+                        <h3>Hover Mark <i class="fa-solid fa-star"></i></h3>
 
                         <p>
                             Neovim plugin written in Lua. Helps display marks in Neovim buffers to help make using marks easier to use.
                         </p>
 
                         <a href="https://github.com/rdawson46/hover_mark.nvim" target="_blank">Github >></a>
+                    </div>
+                    <div class="project">
+                        <h3>Editor <i class="fa-solid fa-star"></i></h3>
+
+                        <p>
+                            Vim like editor written in Rust. Made the UI with Ratatui and wrote the rest
+                            from scratch. Currently adding Vim motions.
+                        </p>
+
+                        <a href="https://github.com/crooksryan/editor" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Rust Listener</h3>
@@ -159,16 +169,6 @@ const index = ref(0);
 
 
                         <a href="https://github.com/rdawson46/CourseScheduler" target="_blank">Github >></a>
-                    </div>
-                    <div class="project">
-                        <h3>Language Learning</h3>
-
-                        <p>
-                            Repository to track progress when learning a new language.
-                            Currently leanring Rust. Planning on learning Go and Zig.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/language-learning" target="_blank">Github >></a>
                     </div>
                 </div>
             </div>
