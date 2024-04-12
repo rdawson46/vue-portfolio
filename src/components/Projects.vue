@@ -1,20 +1,8 @@
-<script setup>
-import { ref } from 'vue';
-const index = ref(0);
-</script>
-
 <template>
     <div class="section">
         <h1>Projects</h1>
-
-        <div class="button-holder">
-            <button @click="index=0" :class="{ selected: index == 0 }">Python</button>
-            <button @click="index=1" :class="{ selected: index == 1 }">Javascript</button>
-            <button @click="index=2" :class="{ selected: index == 2 }">Other</button>
-        </div>
-
-        <Transition name="fade" mode="out-in">
-            <div class="language" v-if='index == 0'>
+            <div class="language">
+                <h2>Python</h2>
                 <div class="project-container">
                     <div class="project">
                         <h3>Paper-Trader Back-End <i class="fa-solid fa-star"></i></h3>
@@ -67,7 +55,8 @@ const index = ref(0);
                 </div>
             </div>
 
-            <div class="language" v-else-if='index == 1'>
+            <div class="language">
+                <h2>JavaScript</h2>
                 <div class="project-container">
                     <div class="project">
                         <h3>Paper-Trader Front-End <i class="fa-solid fa-star"></i></h3>
@@ -112,7 +101,8 @@ const index = ref(0);
                 </div>
             </div>
 
-            <div class="language" v-else-if='index == 2'>
+            <div class="language">
+                <h2>Others</h2>
                 <div class="project-container">
                     <div class="project">
                         <h3>Hover Mark <i class="fa-solid fa-star"></i></h3>
@@ -172,7 +162,6 @@ const index = ref(0);
                     </div>
                 </div>
             </div>
-        </Transition>
 
     </div>
 </template>
@@ -182,10 +171,20 @@ h1 {
     color: var(--accent);
 }
 
+h2{
+    text-align: center;
+    color: var(--secondary);
+    margin: 0 20%;
+    padding: 0;
+    font-size: 2rem;
+    border-bottom: 2px white solid;
+    /*border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;*/
+    border-image: linear-gradient(139deg, #c75e38, #de698c, #cb8ece,
+        #abb3ec, #a4cfea) 1;
+}
+
 .section {
     margin: 25px 0;
-    /*padding: 0 25px;*/
-    /*width: calc(100% - 50px);*/
     min-height: calc(100vh - 60px);
     height: fit-content;
 }
@@ -198,8 +197,9 @@ h1 {
 }
 
 .project {
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
     border-radius: 1.75rem;
+    border: solid var(--accent) 2px;
     margin: 0 1rem 1rem 0;
     padding: 0.75rem 1rem;
     transition: all 450ms;
@@ -208,7 +208,7 @@ h1 {
 
 @media (prefers-color-scheme: light){
     .project{
-        color: var(--background);
+        color: var(--primary);
     }
 
     .project:hover{
@@ -284,104 +284,6 @@ a:hover:before {
             var(--accent) 50%,
             var(--primary) 50%);
     }
-}
-
-.button-holder {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 7rem;
-    align-items: center;
-}
-
-button {
-    flex: 1;
-    position: relative;
-    padding-left: auto;
-    padding-right: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;  
-    /* border: 2px solid #f2f2f2; */
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    /* box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1); */
-    color: var(--text);
-    background: transparent;
-    overflow: hidden;
-    transition: all 300ms ease-out;
-}
-
-button::before,
-button::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-button::after {
-    height: 0;
-    background-color: var(--accent);
-    transition: height 500ms ease;
-    z-index: -1;
-}
-
-button::before {
-    background-color: var(--secondary);
-    height: 100%;
-    z-index: -2;
-}
-
-button:hover {
-    color: var(--background);
-    transition: 0.5s ease;
-}
-
-button:hover::after {
-    height: 100%;
-}
-
-button:nth-of-type(1) {
-    /* border-radius: 6px 0 0 6px; */
-    border-radius: 1.75rem 0 0 1.75rem;
-    border-top: 2px solid var(--primary);
-    border-left: 2px solid var(--primary);
-    border-bottom: 2px solid var(--primary);
-}
-
-button:nth-of-type(2) {
-    border: 2px solid var(--primary);
-    /* border-left: 2px solid var(--primary); */
-}
-
-button:nth-of-type(3) {
-    /* border-radius: 0 6px 6px 0; */
-    border-radius: 0 1.75rem 1.75rem 0;
-    border-top: 2px solid var(--primary);
-    border-right: 2px solid var(--primary);
-    border-bottom: 2px solid var(--primary);
-}
-
-.selected {
-    background-color: var(--accent);
-    color: var(--background);
-}
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: all 250ms;
-}
-
-.fade-enter-active, .fade-enter-from{
-    transition-delay:  150ms;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-    transform: translateX(100%);
 }
 
 @media only screen and (max-width: 900px) {
