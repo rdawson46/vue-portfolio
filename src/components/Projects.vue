@@ -173,7 +173,7 @@ h2{
     color: var(--secondary);
     margin: 0 20%;
     padding: 0;
-    font-size: 2rem;
+    font-size: 2.25rem;
     border-bottom: 0.1rem solid;
     border-image: linear-gradient(139deg, #c75e38, #de698c, #cb8ece,
         #abb3ec, #a4cfea) 1;
