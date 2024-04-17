@@ -6,7 +6,7 @@
     line-height: 1.5;
     font-weight: 400;
 
-    font-size: max(1.1vmax, 16px);
+    font-size: max(0.9vmax, 16px);
     --text: #f9f6ee;
     --background: #1f1c1f;
     --primary: #194c6c;

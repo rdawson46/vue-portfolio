@@ -193,7 +193,6 @@ h2{
 }
 
 .project {
-    /* background-color: var(--primary); */
     border-radius: 1.75rem;
     border: solid var(--accent) 0.1rem;
     margin: 0 1rem 1rem 0;
@@ -214,6 +213,10 @@ h2{
 
 .project h3 {
     margin: 0.5rem 0;
+}
+
+.project p {
+    margin-top: 0;
 }
 
 
