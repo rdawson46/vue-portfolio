@@ -60,7 +60,7 @@ onMounted(()=>{
             <li class="upper"><a href="#about-me" >About Me</a></li>
             <li class="upper"><a href="#resume" >Resume</a></li>
             <li class="upper"><a href="#projects">Projects</a></li>
-            <li class="upper"><a href="#skills">Skills</a></li>
+            <li class="upper"><a href="#interests">Interests</a></li>
         </ul>
     </nav>
 </template>

@@ -167,18 +167,14 @@
 </template>
 
 <style scoped>
-h1 {
-    color: var(--accent);
-}
-
 h2{
     text-align: center;
+    letter-spacing: 0.1rem;
     color: var(--secondary);
     margin: 0 20%;
     padding: 0;
     font-size: 2rem;
-    border-bottom: 2px white solid;
-    /*border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;*/
+    border-bottom: 0.1rem solid;
     border-image: linear-gradient(139deg, #c75e38, #de698c, #cb8ece,
         #abb3ec, #a4cfea) 1;
 }
@@ -199,7 +195,7 @@ h2{
 .project {
     /* background-color: var(--primary); */
     border-radius: 1.75rem;
-    border: solid var(--accent) 2px;
+    border: solid var(--accent) 0.1rem;
     margin: 0 1rem 1rem 0;
     padding: 0.75rem 1rem;
     transition: all 450ms;

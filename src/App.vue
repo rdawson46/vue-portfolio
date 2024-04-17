@@ -4,7 +4,7 @@ import Intro from './components/Intro.vue';
 import Navbar from './components/Navbar.vue';
 import Projects from './components/Projects.vue';
 import Resume from './components/Resume.vue';
-import Skills from './components/Skills.vue';
+import Interests from './components/Interests.vue';
 import { onMounted } from 'vue';
 
 onMounted(()=>{
@@ -44,7 +44,7 @@ onMounted(()=>{
     <About id="about-me" class="hidden"/>
     <Resume id="resume" class="hidden"/>
     <Projects id="projects" class="hidden"/>
-    <Skills id="skills" class="hidden"/>
+    <Interests id="interests" class="hidden"/>
   </div>
 </template>
 

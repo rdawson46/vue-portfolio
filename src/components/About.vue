@@ -32,6 +32,7 @@ p{
 h1{
     color: var(--accent)
 }
+
 /*
 .section::before{
     content: '';
@@ -47,9 +48,10 @@ h1{
     top: -30px;
 }
 */
+
 .section{
     margin: 25px 0;
-    min-height: calc(100vh - 60px);
+    min-height: 80vh;
     height: fit-content;
 }
 

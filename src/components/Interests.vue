@@ -1,21 +1,17 @@
-<script setup>
-
-</script>
-
 <template>
     <div class="section">
-        <h1>Skills</h1>
+        <h1>Interests</h1>
         <ul class="major">
             <li>
                 <div class="icon"><i class="fa-solid fa-server"></i></div>
                 <div class="descr">
                     <h2 class="title">Back-End</h2>
                     <ul>
-                        <li>Python<progress max="10" value="9"></progress></li>
-                        <li>Flask<progress max="10" value="8"></progress></li>
-                        <li>JavaScript<progress max="10" value="7"></progress></li>
-                        <li>Rust<progress max="10" value="5"></progress></li>
-                        <li>PostgreSQL<progress max="10" value="7"></progress></li>
+                        <li>Rust</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>PostgreSQL</li>
+                        <li>Go</li>
                     </ul>
                 </div>
             </li>
@@ -24,11 +20,11 @@
                 <div class="descr">
                     <div class="title">Front-End</div>
                     <ul>
-                        <li>Vue.JS<progress max="10" value="8"></progress></li>
-                        <li>HTML<progress max="10" value="7"></progress></li>
-                        <li>CSS <br><progress max="10" value="6"></progress></li>
-                        <li>React<progress max="10" value="6.5"></progress></li>
-                        <li>JQuery<progress max="10" value="5"></progress></li>
+                        <li>Vue.JS</li>
+                        <li>HTML</li>
+                        <li>CSS </li>
+                        <li>React</li>
+                        <li>JQuery</li>
                     </ul>
                     
                 </div>
@@ -38,11 +34,11 @@
                 <div class="descr">
                     <div class="title">Tools</div>
                     <ul>
-                        <li>Windows and Linux<progress max="10" value="9"></progress></li>
-                        <li>Firebase<progress max="10" value="5.5"></progress></li>
-                        <li>Git<br><progress max="10" value="8"></progress></li>
-                        <li>VS Code<progress max="10" value="9"></progress></li>
-                        <li>Neovim<progress max="10" value="7.5"></progress></li>
+                        <li>NixOS/Linux</li>
+                        <li>Windows</li>
+                        <li>Firebase</li>
+                        <li>Neovim</li>
+                        <li>Git</li>
                     </ul>
                 </div>
             </li>
@@ -56,24 +52,11 @@ h1 {
 }
 
 .section {
-    /*background-color: var(--primary);*/
     margin: 25px 0 25px 0;
-    /*padding: 5px 25px 4rem 25px;*/
-    /*width: calc(100% - 50px);*/
     min-height: calc(100vh - 60px);
     height: fit-content;
 }
 
-/*.section::before{
-    content: "";
-    display: block;
-    position: absolute;
-    height: 0.25rem;
-    left: 0;
-    top: 0;
-    right: 0;
-    background: var(--accent);
-}*/
 
 ul {
     margin-bottom: 0;
@@ -133,7 +116,7 @@ ul {
     place-items: center;
     color: var(--secondary);
     font-size: 2.5rem;
-    border: 0.25rem solid var(--accent);
+    border: 0.1rem solid var(--accent);
     border-radius: 50%;
     background: var(--primary);
     box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45), inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
@@ -170,7 +153,7 @@ ul {
     background-color: var(--background);
     border-radius: 1.75rem;
     padding: 0.75rem 1rem;
-    border: 0.25rem solid var(--accent);
+    border: 0.1rem solid var(--accent);
     box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45), inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
 }
 
