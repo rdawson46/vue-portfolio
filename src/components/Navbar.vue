@@ -60,7 +60,7 @@ onMounted(()=>{
             <li class="upper"><a href="#about-me" >About Me</a></li>
             <li class="upper"><a href="#resume" >Resume</a></li>
             <li class="upper"><a href="#projects">Projects</a></li>
-            <li class="upper"><a href="#interests">Interests</a></li>
+            <!-- <li class="upper"><a href="#interests">Interests</a></li> -->
         </ul>
     </nav>
 </template>
@@ -170,6 +170,7 @@ nav li a:before{
     transition: all 0.3s ease-in-out;
 }
     
+/*
 @media (prefers-color-scheme: light){
     .clearNav svg{
         fill: var(--background);
@@ -205,6 +206,7 @@ nav li a:before{
     }
 
 }
+*/
 nav li a:hover{
     background-position: 0;
 }
@@ -276,6 +278,7 @@ nav li a:hover:before{
     
 }
 
+/*
 @media (prefers-color-scheme: light) and (max-width: 690px){
     .filledNav li a{
         background-image: linear-gradient(
@@ -286,4 +289,5 @@ nav li a:hover:before{
         );
     }
 }
+*/
 </style>

@@ -211,9 +211,11 @@ onMounted(()=>{
     margin: 0;
 }
 
+/*
 @media (prefers-color-scheme: light){
     h2, h3{
         color: var(--background);
     }
 }
+*/
 </style>

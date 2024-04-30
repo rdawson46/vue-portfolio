@@ -44,7 +44,7 @@ onMounted(()=>{
     <About id="about-me" class="hidden"/>
     <Resume id="resume" class="hidden"/>
     <Projects id="projects" class="hidden"/>
-    <Interests id="interests" class="hidden"/>
+    <!--<Interests id="interests" class="hidden"/> -->
   </div>
 </template>
 

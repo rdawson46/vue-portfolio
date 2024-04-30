@@ -98,7 +98,7 @@ img{
 i{
     aspect-ratio: 1;
     font-size: 10rem;
-    border: 0.5rem solid var(--primary);
+    border: 0.25rem solid var(--primary);
     border-radius: 50%;
     padding: 2.5rem;
     color: var(--accent);

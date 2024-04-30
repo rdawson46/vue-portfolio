@@ -173,14 +173,14 @@ h2{
     color: var(--secondary);
     margin: 0 20%;
     padding: 0;
-    font-size: 2.25rem;
+    font-size: 2rem;
     border-bottom: 0.1rem solid;
     border-image: linear-gradient(139deg, #c75e38, #de698c, #cb8ece,
         #abb3ec, #a4cfea) 1;
 }
 
 .section {
-    margin: 25px 0;
+    margin: 3rem 0;
     min-height: calc(100vh - 60px);
     height: fit-content;
 }
@@ -198,9 +198,10 @@ h2{
     margin: 0 1rem 1rem 0;
     padding: 0.75rem 1rem;
     transition: all 450ms;
-    box-shadow: 0 0 0.5rem 0.25rem #182318df;
+    /*box-shadow: 0 0 0.5rem 0.25rem #182318df;*/
 }
 
+/*
 @media (prefers-color-scheme: light){
     .project{
         color: var(--primary);
@@ -210,6 +211,7 @@ h2{
         color: var(--text);
     }
 }
+*/
 
 .project h3 {
     margin: 0.5rem 0;
@@ -269,6 +271,7 @@ a:hover:before {
     width: 100%;
 }
 
+/*
 @media (prefers-color-scheme: light) {
     .project a {
         background-image: linear-gradient(to right,
@@ -284,6 +287,7 @@ a:hover:before {
             var(--primary) 50%);
     }
 }
+*/
 
 @media only screen and (max-width: 900px) {
     .project-container{
