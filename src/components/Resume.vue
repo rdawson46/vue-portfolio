@@ -11,22 +11,25 @@ const exp_ind = ref(0);
     <div class="section">
         <h1>Resume</h1>
         <div class="grid">
-            <div class="box courses">
-                <h2 class="title">Relevant Courses</h2>
-                <ul>
-                    <li>Systems and Network Programming</li>
-                    <li>Web Development</li>
-                    <li>Programming Language Concepts</li>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Compiler Construction</li>
-                </ul>
-            </div>
             <div class="box education">
                 <h2 class="title">Education</h2>
                 <h3 class="sub-title">Pennsylvania State University</h3>
                 <ul>
                     <li>Computer Science, B.S.</li>
                     <li>Expected Graduation: May 2024</li>
+                </ul>
+            </div>
+            <div class="box courses">
+                <h2 class="title">Relevant Courses</h2>
+                <ul>
+                    <li>Systems Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Development</li>
+                    <li>Programming Language Concepts</li>
+                    <li>Operating Systems Design</li>
+                    <li>Numerical Computations</li>
+                    <li>Compiler Construction</li>
+                    <li>Programming Models for Big Data</li>
                 </ul>
             </div>
             <div class="box contact">
@@ -46,19 +49,19 @@ const exp_ind = ref(0);
                 <Transition name='fade' mode='out-in'>
                     <div v-if='exp_ind == 0'>
                         <h3 class="sub-title">BNY Mellon</h3>
+                        <h4 class="job-title"> Data Science Analyst Program</h4>
+                        <ul>
+                            <li>Starting August 2024</li> 
+                            <li>Full time program focused on development</li>
+                        </ul>
+                    </div>
+                    <div v-else-if='exp_ind == 1'>
+                        <h3 class="sub-title">BNY Mellon</h3>
                         <h4 class="job-title">START Intern Program, Data Science</h4>
                         <ul>
                             <li>Used open source projects to leverage generative AI</li>
                             <li>Wrote a research paper on embedding vectors and presented to a team of engineers</li>
                             <li>Developed an API to convert text data into a structured data object</li>
-                        </ul>
-                    </div>
-                    <div v-else-if='exp_ind == 1'>
-                        <h3 class="sub-title">BNY Mellon</h3>
-                        <h4 class="job-title"> Data Science Analyst Program</h4>
-                        <ul>
-                            <li>Starting August 2024</li> 
-                            <li>Full time program focused on development</li>
                         </ul>
                     </div>
                 </Transition>
@@ -125,7 +128,7 @@ const exp_ind = ref(0);
 .btn{
     background-color: var(--secondary);
     height: 1rem;
-    aspect-ratio: 1/1;
+    width: 1rem;
     border-radius: 50%;
     border: none;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
@@ -158,7 +161,7 @@ h1{
 .grid{
     display: grid;
     gap: 1.5rem;
-    padding: 0.75rem 12.5rem 1.5rem 12.5rem;
+    padding: 0.75rem 7.5rem 1.5rem 7.5rem;
 }
 
 .box{
@@ -173,7 +176,7 @@ h1{
     grid-row: 1;
 }
 
-.eduction{
+.education{
     grid-column: 1;
     grid-row: 1;
 }
@@ -181,7 +184,6 @@ h1{
 .contact{
     grid-column: 3;
     grid-row: 1;
-    border-color: var(--secondary);
     background-color: var(--secondary40);
 }
 
@@ -266,7 +268,7 @@ a:hover:before{
         padding: 0.75rem 6.25rem 1.5rem 6.25rem;
     }
 
-    .two, .three, .experience{
+    .courses, .contact, .experience{
         grid-column: 1;
     }
 
@@ -304,11 +306,11 @@ a:hover:before{
     }
 
     .courses{
-        grid-row: 1;
+        grid-row: 2;
     }
 
     .education{
-        grid-row: 2;
+        grid-row: 1;
     }
 
     .contact{
