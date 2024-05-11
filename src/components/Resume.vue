@@ -1,5 +1,4 @@
 <script setup>
-import Interests from './Interests.vue';
 import { ref } from 'vue';
 
 const exp_ind = ref(0);
@@ -16,7 +15,7 @@ const exp_ind = ref(0);
                 <h3 class="sub-title">Pennsylvania State University</h3>
                 <ul>
                     <li>Computer Science, B.S.</li>
-                    <li>Expected Graduation: May 2024</li>
+                    <li>Graduation Date: May 2024</li>
                 </ul>
             </div>
             <div class="box courses">

@@ -105,15 +105,6 @@
                 <h2>Others</h2>
                 <div class="project-container">
                     <div class="project">
-                        <h3>Hover Mark <i class="fa-solid fa-star"></i></h3>
-
-                        <p>
-                            Neovim plugin written in Lua. Helps display marks in Neovim buffers to help make using marks easier to use.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/hover_mark.nvim" target="_blank">Github >></a>
-                    </div>
-                    <div class="project">
                         <h3>Editor <i class="fa-solid fa-star"></i></h3>
 
                         <p>
@@ -122,6 +113,15 @@
                         </p>
 
                         <a href="https://github.com/crooksryan/editor" target="_blank">Github >></a>
+                    </div>
+                    <div class="project">
+                        <h3>Hover Mark <i class="fa-solid fa-star"></i></h3>
+
+                        <p>
+                            Neovim plugin written in Lua. Helps display marks in Neovim buffers to help make using marks easier to use.
+                        </p>
+
+                        <a href="https://github.com/rdawson46/hover_mark.nvim" target="_blank">Github >></a>
                     </div>
                     <div class="project">
                         <h3>Rust Listener</h3>

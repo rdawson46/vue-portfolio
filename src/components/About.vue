@@ -10,9 +10,9 @@
             </div>
             <div class="text-holder">
                 <p>
-                    &Tab;Hello, my name is Ryan and I am a fourth year Computer Science student at Penn State University. I've been coding for six years now and have experience with web development, systems programming, data science, and using AI. 
+                    &Tab;Hello, my name is Ryan and I am a recent Computer Science graduate from Penn State University. I've been coding for seven years now and have experience with web development, systems programming, data science, and using AI. 
                     I try to stay up to date with the most popular frameworks and libraries, so that I can achieve my goal of becoming a back-end developer. I'm from Pittsburg, PA, but I also lived in Tempe, Az for 6 months. I enjoy learning about this ever developing field and I'm willing to work to improve every day.
-                    This past summer, I was interning at Bank of New York Mellon as a part of their START Technology Intern Program on the data science track.
+                    At the end of this summer, I will be returning to Bank of New York Mellon as a data science analyst.
                 </p>
                 
                 <p>
