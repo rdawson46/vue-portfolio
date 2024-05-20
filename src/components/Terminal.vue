@@ -205,12 +205,17 @@ onMounted(()=>{
 
 .output{
     padding: 0 4px;
+    margin: 0;
 }
+
 
 .output h2{
     margin: 0;
 }
 
+.output h3 {
+    margin: 0 0 1rem;
+}
 /*
 @media (prefers-color-scheme: light){
     h2, h3{

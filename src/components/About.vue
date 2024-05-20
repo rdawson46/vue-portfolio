@@ -33,21 +33,32 @@ h1{
     color: var(--accent)
 }
 
-/*
 .section::before{
     content: '';
     height: 10px;
     left: 0;
     right: 0;
     background-image: linear-gradient(
-        139deg, #fb8817, #ff4b01,
-        #c12127, #e02aff
-        );
+        139deg,
+        /*
+        #fb8817,
+        #ff4b01,
+        #c12127,
+        #e02aff
+        */
+        #194c6c,
+        #364f7e,
+        #584f89,
+        #7b4c8a,
+        #9c4781,
+        #b5456e,
+        #c44d55,
+        #c65e38
+    );
     position: absolute;
     display: block;
     top: -30px;
 }
-*/
 
 .section{
     margin: 25px 0;

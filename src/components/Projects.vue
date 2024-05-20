@@ -134,10 +134,11 @@
                         <a href="https://github.com/rdawson46/rust-listener" target="_blank">Github >></a>
                     </div>
                     <div class="project">
-                        <h3>Rust Back End</h3>
+                        <h3>Terminal Stock Ticker</h3>
 
                         <p>
-                            Social media site written with Rust and React. More of a back end project with using Rust and Postgres.
+                            Application written in Go that will display stock information in the terminal, including a pricing chart.
+                            Allows the user to write a custom config to display any stock they want.
                         </p>
 
                         <a href="https://github.com/rdawson46/musical-waffle" target="_blank">Github >></a>
