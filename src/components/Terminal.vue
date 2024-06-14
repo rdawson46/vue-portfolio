@@ -32,11 +32,11 @@ onMounted(()=>{
         // output 2
         setTimeout(()=>{
             output2.innerText = output2Text;
-        }, 1650)
+        }, 1400)
 
         setTimeout(()=>{
             activeLine.value = 2;
-        }, 1750);
+        }, 1450);
     }, 500)
 });
 </script>
@@ -62,7 +62,7 @@ onMounted(()=>{
             </div>
             <div class="output">
                 <h2 id="output1">Hi, I'm Ryan</h2>
-                <h3 id="output2">Penn State computer science alumni and incoming data science analyst at BNY Mellon</h3>
+                <h3 id="output2">Incoming data science analyst at BNY Mellon, AI Hub</h3>
             </div>
             <div class="terminal-prompt" v-if="activeLine==2">
                 <span class="terminal-user">ryancrooks@admin:</span>

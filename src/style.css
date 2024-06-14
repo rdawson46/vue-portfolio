@@ -7,13 +7,19 @@
     font-weight: 400;
 
     font-size: max(0.9vmax, 16px);
-    --text: #f9f6ee;
-    --background: #1f1c1f;
-    --primary: #194c6c;
-    --primary40: #194c6c40;
-    --secondary: #c65e38;
-    --secondary40: #c65e3840;
-    --accent: #a2ceea;
+    --text: #e0def4;
+    --background: #191724;
+    --smallbackground: #393552;
+    /*--primary: #194c6c;
+    --primary40: #194c6c40;*/
+    --primary: #594ebb;
+    --primary40: #594ebb20;
+    --secondary: #d7827e;
+    /*--secondary: #c4a7e7;
+    --secondary40: #c4a7e740;*/
+    --secondary40: #d7827e40;
+    --accent: #f6c177;
+    --secondary-accent: #56949f;
 
     color-scheme: light dark;
 

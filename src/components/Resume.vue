@@ -48,7 +48,7 @@ const exp_ind = ref(0);
                 <Transition name='fade' mode='out-in'>
                     <div v-if='exp_ind == 0'>
                         <h3 class="sub-title">BNY Mellon</h3>
-                        <h4 class="job-title"> Data Science Analyst Program</h4>
+                        <h4 class="job-title"> Data Science Analyst Program<br>Aug 2024 - Current</h4>
                         <ul>
                             <li>Starting August 2024</li> 
                             <li>Full time program focused on development</li>
@@ -56,7 +56,7 @@ const exp_ind = ref(0);
                     </div>
                     <div v-else-if='exp_ind == 1'>
                         <h3 class="sub-title">BNY Mellon</h3>
-                        <h4 class="job-title">START Intern Program, Data Science</h4>
+                        <h4 class="job-title">START Intern Program, Data Science<br>May 2023 - Aug 2023</h4>
                         <ul>
                             <li>Used open source projects to leverage generative AI</li>
                             <li>Wrote a research paper on embedding vectors and presented to a team of engineers</li>
@@ -381,7 +381,7 @@ a:hover:before{
     content: "";
     grid-area: line;
     height: 2.5rem;
-    border-right: 2px dashed var(--accent);
+    border-right: 2px dashed var(--secondary-accent);
 }
 
 .major > li::after {
@@ -408,7 +408,7 @@ a:hover:before{
     background-color: var(--background);
     border-radius: 1.75rem;
     padding: 0.75rem 1rem;
-    border: 0.1rem solid var(--accent);
+    border: 0.1rem solid var(--secondary-accent);
     box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45), inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
 }
 

@@ -176,7 +176,7 @@ h2{
     padding: 0;
     font-size: 2rem;
     border-bottom: 0.1rem solid;
-    border-image: linear-gradient(139deg, #c75e38, #de698c, #cb8ece,
+    border-image: linear-gradient(139deg, var(--accent), #de698c, #cb8ece,
         #abb3ec, #a4cfea) 1;
 }
 
@@ -194,25 +194,13 @@ h2{
 }
 
 .project {
-    border-radius: 1.75rem;
-    border: solid var(--accent) 0.1rem;
+    border-radius: 1rem;
+    background-color: #26233a;
     margin: 0 1rem 1rem 0;
-    padding: 0.75rem 1rem;
+    padding: 0.25rem 1rem 0.75rem 1rem;
     transition: all 450ms;
-    /*box-shadow: 0 0 0.5rem 0.25rem #182318df;*/
+    filter: grayscale(15%);
 }
-
-/*
-@media (prefers-color-scheme: light){
-    .project{
-        color: var(--primary);
-    }
-
-    .project:hover{
-        color: var(--text);
-    }
-}
-*/
 
 .project h3 {
     margin: 0.5rem 0;
@@ -222,7 +210,6 @@ h2{
     margin-top: 0;
 }
 
-
 @media only screen and (min-width: 650px) {
     .project {
         width: 18rem;
@@ -230,7 +217,8 @@ h2{
 
     .project-container:hover .project:hover {
         filter: brightness(100%) grayscale(0);
-        background-color: var(--secondary);
+        background-color: var(--smallbackground);
+        border: solid var(--accent) 0.05rem;
         box-shadow: 0 0 0 0;
         scale: 115%;
         z-index: 10;
@@ -271,24 +259,6 @@ a:hover {
 a:hover:before {
     width: 100%;
 }
-
-/*
-@media (prefers-color-scheme: light) {
-    .project a {
-        background-image: linear-gradient(to right,
-            var(--accent),
-            var(--accent) 50%,
-            var(--secondary) 50%);
-    }
-
-    .project:hover a {
-        background-image: linear-gradient(to right,
-            var(--accent),
-            var(--accent) 50%,
-            var(--primary) 50%);
-    }
-}
-*/
 
 @media only screen and (max-width: 900px) {
     .project-container{
