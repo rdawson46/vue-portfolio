@@ -195,7 +195,8 @@ h2{
 
 .project {
     border-radius: 1rem;
-    background-color: #26233a;
+    /*background-color: #26233a;*/
+    background-color: var(--secondary40);
     margin: 0 1rem 1rem 0;
     padding: 0.25rem 1rem 0.75rem 1rem;
     transition: all 450ms;

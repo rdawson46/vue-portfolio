@@ -10,9 +10,9 @@
             </div>
             <div class="text-holder">
                 <p>
-                    Hi, my name is Ryan and I am a recent Computer Science graduate from Penn State University. I've been coding for seven years now and have experience with web development, systems programming, data science, and using AI. 
-                    I try to stay up to date with the most popular frameworks and libraries, so that I can achieve my goal of becoming a back-end developer. I'm from Pittsburg, PA, but I also lived in Tempe, Az for 6 months. I enjoy learning about this ever developing field and I'm willing to work and improve every day.
-                    At the end of this summer, I will be returning to Bank of New York Mellon as a data science analyst.
+                    Hi, my name is Ryan and I am a recent Computer Science graduate from Penn State University. I've been coding for seven years now and have experience with web development, systems programming, data science, and using generative AI. 
+                    I try to stay up to date with the most popular frameworks and libraries, so that I can achieve my goal of becoming a back-end developer. I'm from Pittsburgh, PA, but I also lived in Tempe, Az for 6 months. I enjoy learning about this ever developing field and I'm willing to work and improve every day.
+                    Recently, I have returned to the Bank of New York as a data science analyst within the AI Hub.
                 </p>
  
                 <p>

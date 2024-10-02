@@ -50,8 +50,8 @@ const exp_ind = ref(0);
                         <h3 class="sub-title">BNY Mellon</h3>
                         <h4 class="job-title"> Data Science Analyst Program<br>Aug 2024 - Current</h4>
                         <ul>
-                            <li>Starting August 2024</li> 
                             <li>Full time program focused on development</li>
+                            <li>Recenly started and will be updated over time</li> 
                         </ul>
                     </div>
                     <div v-else-if='exp_ind == 1'>
@@ -59,8 +59,8 @@ const exp_ind = ref(0);
                         <h4 class="job-title">START Intern Program, Data Science<br>May 2023 - Aug 2023</h4>
                         <ul>
                             <li>Used open source projects to leverage generative AI</li>
-                            <li>Wrote a research paper on embedding vectors and presented to a team of engineers</li>
                             <li>Developed an API to convert text data into a structured data object</li>
+                            <li>Wrote a research paper on embedding vectors and presented to a team of engineers</li>
                         </ul>
                     </div>
                 </Transition>

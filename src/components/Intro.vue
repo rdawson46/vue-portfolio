@@ -55,7 +55,8 @@ onMounted(()=>{
     height: 100vh;
     position: absolute;
     z-index: -1;
-    background-image: url('./../assets/low-poly-grid-haikei.svg');
+    /*background-image: url('./../assets/low-poly-grid-haikei.svg');*/
+    background-image: url('./../assets/blob-scene-haikei.svg');
     background-size: cover;
     background-position: center;
 }
