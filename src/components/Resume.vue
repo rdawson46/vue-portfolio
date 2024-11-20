@@ -62,7 +62,7 @@ onMounted(() => {
                 <Transition name='fade' mode='out-in'>
                     <div v-if='exp_ind == 0'>
                         <h3 class="sub-title">BNY Mellon</h3>
-                        <h4 class="job-title"> Data Science Analyst Program<br>Aug 2024 - Current</h4>
+                        <h4 class="job-title"> Data Science Analyst<br>Aug 2024 - Current</h4>
                         <ul>
                             <li>Full time program focused on development</li>
                             <li>Recenly started and will be updated over time</li> 
@@ -141,8 +141,8 @@ onMounted(() => {
 .btn{
     background-color: var(--secondary);
     height: 1rem;
-    width: 1rem;
-    border-radius: 50%;
+    width: 2rem;
+    border-radius: 1.5rem;
     border: none;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease 0s;
@@ -154,7 +154,7 @@ onMounted(() => {
 .btn:hover{
     background-color: var(--accent);
     box-shadow: 0px 15px 20px rgba(162, 206, 234, 0.9);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .active{

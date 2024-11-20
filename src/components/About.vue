@@ -30,13 +30,18 @@ onMounted(() => {
             </div>
             <div class="text-holder hidden">
                 <p>
-                    Hi, my name is Ryan and I am a recent Computer Science graduate from Penn State University. I've been coding for seven years now and have experience with web development, systems programming, data science, and using generative AI. 
-                    I try to stay up to date with the most popular frameworks and libraries, so that I can achieve my goal of becoming a back-end developer. I'm from Pittsburgh, PA, but I also lived in Tempe, Az for 6 months. I enjoy learning about this ever developing field and I'm willing to work and improve every day.
-                    Recently, I have returned to the Bank of New York as a data science analyst within the AI Hub.
+                Hi, I’m Ryan, a Computer Science graduate from Penn State University with seven years of coding experience.
+                My expertise spans web development, systems programming, data science, and generative AI.
+                I strive to stay current with popular frameworks and libraries, always working toward my goal of becoming a skilled back-end developer.
                 </p>
  
                 <p>
-                    Outside of technology, I enjoy running and I'm currently preparing for my second marathon. I love to cook for all my friends and family. I enjoy following the NBA, NFL, Formula 1, and college sports in my free time. In PA winters can get decently snowy, which allows for me to partake in my favortie winter hobby, snowboarding.
+                Currently, I’m a Data Science Analyst at the AI Hub at the Bank of New York Mellon.
+                I’m passionate about continuous learning and problem-solving, always eager to improve and grow in this ever-evolving field.
+                </p>
+
+                <p>
+                Originally from Pittsburgh, I’ve also spent time in Tempe, AZ and State College, PA. When I’m not coding, I enjoy running (currently training for my second marathon), cooking for friends and family, and following sports like the NBA, NFL, Formula 1, and college athletics. I’m also an avid snowboarder, making the most of Pennsylvania’s snowy winters.
                 </p>
             </div>
         </div>
