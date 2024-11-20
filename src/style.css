@@ -93,3 +93,14 @@ h1{
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent);
 }
+
+.hidden{
+  opacity: 0%;
+  filter: blur(5px) brightness(0);
+  transition: all 350ms ease-out;
+}
+
+.show{
+  opacity: 100%;
+  filter: blur(0) brightness(1);
+}

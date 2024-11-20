@@ -1,10 +1,29 @@
+<script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      } else{
+        entry.target.classList.remove('show');
+      }
+    });
+  })
+
+  const hidden = document.querySelectorAll('.hidden');
+
+  hidden.forEach((element)=> observer.observe(element));
+});
+</script>
 <template>
     <div class="section">
         <h1>Projects</h1>
             <div class="language">
                 <h2>Python</h2>
                 <div class="project-container">
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Paper-Trader Back-End <i class="fa-solid fa-star"></i></h3>
 
                         <p>
@@ -14,7 +33,7 @@
 
                         <a href="https://github.com/rdawson46/paper-trading" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Data Mine <i class="fa-solid fa-star"></i></h3>
 
                         <p>
@@ -24,7 +43,7 @@
 
                         <a href="https://github.com/rdawson46/data-mine" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Pi-Daily Email</h3>
 
                         <p>
@@ -33,7 +52,7 @@
 
                         <a href="https://github.com/rdawson46/pi-daily-email" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Social Media App</h3>
 
                         <p>
@@ -43,7 +62,7 @@
 
                         <a href="https://github.com/rdawson46/social-media" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Chat App</h3>
 
                         <p>
@@ -58,7 +77,7 @@
             <div class="language">
                 <h2>JavaScript</h2>
                 <div class="project-container">
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Paper-Trader Front-End <i class="fa-solid fa-star"></i></h3>
 
                         <p>
@@ -68,7 +87,7 @@
 
                         <a href="https://github.com/rdawson46/paper-trading" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Blockchain Coin-Flip <i class="fa-solid fa-star"></i></h3>
 
                         <p>
@@ -79,7 +98,7 @@
 
                         <a href="https://github.com/rdawson46/blockchain-coin" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Chat App</h3>
 
                         <p>
@@ -89,7 +108,7 @@
 
                         <a href="https://github.com/rdawson46/chatApp" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>This Website</h3>
 
                         <p>
@@ -104,7 +123,7 @@
             <div class="language">
                 <h2>Others</h2>
                 <div class="project-container">
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Editor <i class="fa-solid fa-star"></i></h3>
 
                         <p>
@@ -114,7 +133,7 @@
 
                         <a href="https://github.com/crooksryan/editor" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Hover Mark <i class="fa-solid fa-star"></i></h3>
 
                         <p>
@@ -123,7 +142,7 @@
 
                         <a href="https://github.com/rdawson46/hover_mark.nvim" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Rust Listener</h3>
 
                         <p>
@@ -133,7 +152,7 @@
 
                         <a href="https://github.com/rdawson46/rust-listener" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Terminal Stock Ticker</h3>
 
                         <p>
@@ -143,14 +162,14 @@
 
                         <a href="https://github.com/rdawson46/musical-waffle" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>MinSQL</h3>
 
                         <p>Simple SQL database written in C. Allows users to insert and query data from the terminal.</p>
 
                         <a href="https://github.com/rdawson46/minSQL" target="_blank">Github >></a>
                     </div>
-                    <div class="project">
+                    <div class="project hidden">
                         <h3>Course Scheduler</h3>
 
                         <p>

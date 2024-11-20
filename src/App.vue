@@ -4,7 +4,6 @@ import Intro from './components/Intro.vue';
 import Navbar from './components/Navbar.vue';
 import Projects from './components/Projects.vue';
 import Resume from './components/Resume.vue';
-import Interests from './components/Interests.vue';
 import { onMounted } from 'vue';
 
 onMounted(()=>{
@@ -18,21 +17,6 @@ onMounted(()=>{
       top: `${pageY}px`
     }, {duration: 300, fill: 'forwards'})
   }
-
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('show');
-      } else{
-        entry.target.classList.remove('show');
-      }
-    });
-  })
-
-  const hidden = document.querySelectorAll('.hidden');
-
-  hidden.forEach((element)=> observer.observe(element));
-
 });
 </script>
 
@@ -41,10 +25,9 @@ onMounted(()=>{
   <div id="blob"></div>
   <div id="content">
     <Intro/>
-    <About id="about-me" class="hidden"/>
-    <Resume id="resume" class="hidden"/>
-    <Projects id="projects" class="hidden"/>
-    <!--<Interests id="interests" class="hidden"/> -->
+    <About id="about-me"/>
+    <Resume id="resume"/>
+    <Projects id="projects"/>
   </div>
 </template>
 
@@ -82,18 +65,6 @@ onMounted(()=>{
   to{
     rotate: 360deg;
   }
-}
-
-
-.hidden{
-  opacity: 0%;
-  filter: blur(5px) brightness(0);
-  transition: all 650ms ease-in-out;
-}
-
-.show{
-  opacity: 100%;
-  filter: blur(0) brightness(1);
 }
 
 </style>

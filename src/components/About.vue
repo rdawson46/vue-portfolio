@@ -1,14 +1,34 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const exp_ind = ref(0);
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      } else{
+        entry.target.classList.remove('show');
+      }
+    });
+  })
+
+  const hidden = document.querySelectorAll('.hidden');
+
+  hidden.forEach((element)=> observer.observe(element));
+})
+</script>
 
 <template>
     <div class="section">
         <h1>About Me</h1>
 
         <div class="container">
-            <div class="image-holder">
+            <div class="image-holder hidden">
                 <i class="fa-solid fa-circle-user"></i>
             </div>
-            <div class="text-holder">
+            <div class="text-holder hidden">
                 <p>
                     Hi, my name is Ryan and I am a recent Computer Science graduate from Penn State University. I've been coding for seven years now and have experience with web development, systems programming, data science, and using generative AI. 
                     I try to stay up to date with the most popular frameworks and libraries, so that I can achieve my goal of becoming a back-end developer. I'm from Pittsburgh, PA, but I also lived in Tempe, Az for 6 months. I enjoy learning about this ever developing field and I'm willing to work and improve every day.

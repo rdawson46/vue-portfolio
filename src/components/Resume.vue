@@ -1,16 +1,30 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const exp_ind = ref(0);
 
+onMounted(() => {
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      } else{
+        entry.target.classList.remove('show');
+      }
+    });
+  })
 
+  const hidden = document.querySelectorAll('.hidden');
+
+  hidden.forEach((element)=> observer.observe(element));
+})
 </script>
 
 <template>
     <div class="section">
         <h1>Resume</h1>
         <div class="grid">
-            <div class="box education">
+            <div class="box education hidden">
                 <h2 class="title">Education</h2>
                 <h3 class="sub-title">Pennsylvania State University</h3>
                 <ul>
@@ -18,7 +32,7 @@ const exp_ind = ref(0);
                     <li>Graduation Date: May 2024</li>
                 </ul>
             </div>
-            <div class="box courses">
+            <div class="box courses hidden">
                 <h2 class="title">Relevant Courses</h2>
                 <ul>
                     <li>Systems Programming</li>
@@ -31,7 +45,7 @@ const exp_ind = ref(0);
                     <li>Programming Models for Big Data</li>
                 </ul>
             </div>
-            <div class="box contact">
+            <div class="box contact hidden">
                 <h2 class="title">Contact</h2>
                 <p>
                     I can be best reached on my LinkedIn page: 
@@ -42,7 +56,7 @@ const exp_ind = ref(0);
 
                 </p>
             </div>
-            <div class="box experience">
+            <div class="box experience hidden">
                 <h2 class="title">Experience</h2>
 
                 <Transition name='fade' mode='out-in'>
@@ -69,7 +83,7 @@ const exp_ind = ref(0);
                     <button class="btn" :class="{ active: exp_ind == 1 }" @click="exp_ind=1"></button>
                 </div>
             </div>
-            <div class="box skills">
+            <div class="box skills hidden">
                 <h2 class="title">Skills</h2>
                 <ul class="major">
                     <li>
