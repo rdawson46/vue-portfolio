@@ -2,8 +2,10 @@
   <section class="hero">
     <div class="hero-content">
       <h1 class="hero-title">Ryan Crooks</h1>
-      <p class="hero-subtitle">Data Scientist & Software Developer</p>
-      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <div class="hero-sub">
+        <p class="hero-subtitle">Data Scientist & Software Developer</p>
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+      </div>
     </div>
   </section>
 </template>
@@ -27,6 +29,11 @@
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--text);
+  animation: fade-down 750ms ease-out;
+}
+
+.hero-sub {
+  animation: fade-up 750ms ease-out;
 }
 
 .hero-subtitle {
@@ -54,4 +61,29 @@
   background-color: #0056b3;
   transform: translateY(-3px);
 }
+
+@keyframes fade-down {
+    0% {
+        translate: 0 -25px;
+        opacity: 0;
+    }
+
+    100% {
+        transition: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-up {
+    0% {
+        translate: 0 25px;
+        opacity: 0;
+    }
+
+    100% {
+        transition: 0;
+        opacity: 1;
+    }
+}
+
 </style>
