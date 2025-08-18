@@ -60,7 +60,7 @@ header {
 }
 
 header.scrolled {
-  background-color: rgba(18, 18, 18, 0.8);
+  background-color: rgba(18, 18, 18, 0.7);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
@@ -91,12 +91,12 @@ header.scrolled {
   bottom: -5px;
   width: 0;
   height: 2px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .nav-links a:hover::after {
@@ -115,7 +115,7 @@ header.scrolled {
 }
 
 .social-icon:hover {
-  fill: var(--secondary);
+  fill: var(--primary);
 }
 
 .menu-toggle {

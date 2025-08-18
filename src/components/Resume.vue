@@ -5,14 +5,6 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-content">
-            <h3 class="timeline-title">Education</h3>
-            <p class="timeline-subtitle">Pennsylvania State University</p>
-            <p class="timeline-date">May 2024</p>
-            <p class="timeline-text">Bachelor of Science in Computer Science</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-content">
             <h3 class="timeline-title">Experience</h3>
             <div class="experience-item">
               <p class="timeline-subtitle">BNY, AI Hub</p>
@@ -26,10 +18,22 @@
             </div>
           </div>
         </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3 class="timeline-title">Education</h3>
+            <p class="timeline-subtitle">Pennsylvania State University</p>
+            <p class="timeline-date">May 2024</p>
+            <p class="timeline-text">Bachelor of Science in Computer Science</p>
+          </div>
+        </div>
       </div>
+
+      <!--
       <div class="resume-download">
         <a href="/resume.pdf" download class="btn btn-primary">Download Resume</a>
       </div>
+      -->
     </div>
   </section>
 </template>

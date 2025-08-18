@@ -70,7 +70,7 @@
 }
 
 .skills-list li {
-  background-color: var(--card-background);
+  background-color: var(--tag-background);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 0.9rem;
