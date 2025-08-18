@@ -59,32 +59,32 @@ const setActiveTab = (tab) => {
 <style scoped>
 .projects-section {
   padding: 6rem 2rem;
-  background-color: var(--background);
 }
 
 .projects-container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .projects-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text);
 }
 
 .tabs {
-  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 .tab-btn {
-  background: none;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
+  background: transparent;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  padding: 0.7rem 1.5rem;
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
@@ -93,7 +93,8 @@ const setActiveTab = (tab) => {
 
 .tab-btn.active, .tab-btn:hover {
   background-color: var(--primary);
-  color: var(--background);
+  color: #fff;
+  border-color: var(--primary);
 }
 
 .projects-grid {
@@ -103,18 +104,19 @@ const setActiveTab = (tab) => {
 }
 
 .project-card {
-  background-color: var(--smallbackground);
-  border-radius: 15px;
+  background-color: var(--card-background);
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #2a2a2a;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-content {
@@ -124,7 +126,7 @@ const setActiveTab = (tab) => {
 .project-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--text);
   margin-bottom: 1rem;
 }
 
@@ -132,6 +134,7 @@ const setActiveTab = (tab) => {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  color: var(--secondary);
 }
 
 .project-tech {
@@ -142,18 +145,17 @@ const setActiveTab = (tab) => {
 }
 
 .tech-tag {
-  background-color: var(--primary40);
-  color: var(--primary);
+  background-color: #2a2a2a;
+  color: var(--text);
   padding: 0.3rem 0.8rem;
-  border-radius: 20px;
+  border-radius: 5px;
   font-size: 0.8rem;
-  font-weight: 500;
 }
 
 .project-link {
   display: block;
   background-color: var(--primary);
-  color: var(--background);
+  color: #fff;
   text-align: center;
   padding: 1rem;
   text-decoration: none;
@@ -162,6 +164,6 @@ const setActiveTab = (tab) => {
 }
 
 .project-link:hover {
-  background-color: var(--accent);
+  background-color: #0056b3;
 }
 </style>

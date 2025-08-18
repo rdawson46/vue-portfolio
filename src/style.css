@@ -1,24 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
-    font-family: 'Poppins';
-    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
     font-weight: 400;
+    font-size: 16px;
 
-    font-size: max(0.9vmax, 16px);
     --text: #e0e0e0;
-    --background: #1a1a2e;
-    --smallbackground: #1f2833;
-    --primary: #00adb5;
-    --primary40: #00adb540;
-    --secondary: #ff5722;
-    --secondary40: #ff572240;
-    --accent: #ff5722;
-    --secondary-accent: #00adb5;
-
+    --background: #0a0a0a;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --accent: #007bff;
+    --card-background: #1a1a1a;
 
     color-scheme: dark;
-
     color: var(--text);
     background-color: var(--background);
 
@@ -29,9 +24,9 @@
     -webkit-text-size-adjust: 100%;
 }
 
-html{
+html {
     scroll-behavior: smooth;
-    scroll-padding-top: 3.4rem;
+    scroll-padding-top: 4rem;
 }
 
 body {
@@ -43,43 +38,53 @@ body {
     color: var(--text);
 }
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
+    color: var(--text);
 }
 
-h1{
-    font-size: 2.5rem;
+h1 {
+    font-size: 3.5rem;
     text-align: center;
-    color: var(--accent);
-    letter-spacing: 0.1rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
 }
 
-::-webkit-scrollbar{
-    width: 0.25rem;
-    background-color: #343434;
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 0.125rem;
-    transition: all 150ms;
+    background: var(--primary);
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
+    background: #0056b3;
 }
 
-.hidden{
-  opacity: 0%;
-  filter: blur(5px) brightness(0);
-  transition: all 350ms ease-out;
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.show{
-  opacity: 100%;
-  filter: blur(0) brightness(1);
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
