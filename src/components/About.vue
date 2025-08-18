@@ -4,23 +4,22 @@
       <div class="about-content">
         <h2 class="about-title">About Me</h2>
         <p class="about-text">
-          I'm a software engineer with a passion for building beautiful and functional web applications. I have a strong background in both front-end and back-end development, and I'm always eager to learn new technologies.
+          I'm a software engineer with a passion for building functional applications.
+          I have a strong background in both front-end and back-end development, and I'm always eager to learn new technologies.
         </p>
         <p class="about-text">
-          I'm currently working as a Data Science Analyst at BNY, where I'm helping to build the next generation of financial applications. I'm also a recent graduate of Penn State University, where I earned a degree in Computer Science.
+          I'm currently working as a Data Science Analyst at BNY, where I'm helping to build the next generation of financial applications with generative AI.
+          I'm also a recent graduate of Penn State University, where I earned a degree in Computer Science.
         </p>
       </div>
       <div class="about-skills">
         <h3 class="skills-title">My Skills</h3>
         <ul class="skills-list">
           <li>Python</li>
-          <li>JavaScript</li>
-          <li>Vue.js</li>
-          <li>React</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
           <li>Go</li>
           <li>Rust</li>
+          <li>JavaScript</li>
+          <li>Vue.js</li>
           <li>PostgreSQL</li>
           <li>Firebase</li>
         </ul>
