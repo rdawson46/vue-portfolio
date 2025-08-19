@@ -1,309 +1,176 @@
 <script setup>
-import { onMounted } from 'vue';
+import { ref } from 'vue';
+import { projects } from '../projects';
 
-onMounted(() => {
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('show');
-      } else{
-        entry.target.classList.remove('show');
-      }
-    });
-  })
+const activeTab = ref('python');
 
-  const hidden = document.querySelectorAll('.hidden');
-
-  hidden.forEach((element)=> observer.observe(element));
-});
+const setActiveTab = (tab) => {
+  activeTab.value = tab;
+};
 </script>
+
 <template>
-    <div class="section">
-        <h1>Projects</h1>
-            <div class="language">
-                <h2>Python</h2>
-                <div class="project-container">
-                    <div class="project hidden">
-                        <h3>Paper-Trader Back-End <i class="fa-solid fa-star"></i></h3>
-
-                        <p>
-                            Built with Flask, PostgreSQL, SocketIO, and the Alpaca Trading API.
-                            Allows for users to make accounts and make stocks trades with paper money.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/paper-trading" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Data Mine <i class="fa-solid fa-star"></i></h3>
-
-                        <p>
-                            Runs with scheduled events to gather stock data, make ML models, makes predictions,
-                            and manages a portfolio. Then uses a Flask app to host a dashboard to track progress.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/data-mine" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Pi-Daily Email</h3>
-
-                        <p>
-                            Uses multiple APIs to format an email every day to send useful information to a list of users.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/pi-daily-email" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Social Media App</h3>
-
-                        <p>
-                            Built using Django. Users can make accounts, post, follow users, see global feeds, and followed
-                            feed.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/social-media" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Chat App</h3>
-
-                        <p>
-                            Uses a Flask app and SocketIO for users to send group messages in real time.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/chatApp" target="_blank">Github >></a>
-                    </div>
-                </div>
+  <section id="projects" class="projects-section">
+    <div class="projects-container">
+      <h2 class="projects-title">My Projects</h2>
+      <div class="tabs">
+        <button
+          class="tab-btn"
+          :class="{ active: activeTab === 'python' }"
+          @click="setActiveTab('python')"
+        >
+          Python
+        </button>
+        <button
+          class="tab-btn"
+          :class="{ active: activeTab === 'go' }"
+          @click="setActiveTab('go')"
+        >
+          Go
+        </button>
+        <button
+          class="tab-btn"
+          :class="{ active: activeTab === 'javascript' }"
+          @click="setActiveTab('javascript')"
+        >
+          JavaScript
+        </button>
+        <button
+          class="tab-btn"
+          :class="{ active: activeTab === 'others' }"
+          @click="setActiveTab('others')"
+        >
+          Others
+        </button>
+      </div>
+      <div class="projects-grid">
+        <div
+          v-for="(project, index) in projects[activeTab]"
+          :key="index"
+          class="project-card"
+        >
+          <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+            <div class="project-tech">
+              <span v-for="(tech, i) in project.technologies" :key="i" class="tech-tag">{{ tech }}</span>
             </div>
-
-            <div class="language">
-                <h2>JavaScript</h2>
-                <div class="project-container">
-                    <div class="project hidden">
-                        <h3>Paper-Trader Front-End <i class="fa-solid fa-star"></i></h3>
-
-                        <p>
-                            Front end was built using SocketIO to update prices when the user interacts with the app.
-                            Used JQuery on some pages to simplify development process.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/paper-trading" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Blockchain Coin-Flip <i class="fa-solid fa-star"></i></h3>
-
-                        <p>
-                            Project built with Vue.JS. Allows for users to sync MetaMask wallets and then wager on a coin
-                            flip.
-                            It is a winner take all. Smart contract was made with Solidity.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/blockchain-coin" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Chat App</h3>
-
-                        <p>
-                            Live time chat app. Front end uses SocketIO to handle all events.
-                            Then uses vanilla JS to manipulate the DOM.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/chatApp" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>This Website</h3>
-
-                        <p>
-                            This site is built using Vue.JS and hosted on Firebase and utilizes other Firebase tools.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/vue-portfolio" target="_blank">Github >></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="language">
-                <h2>Others</h2>
-                <div class="project-container">
-                    <div class="project hidden">
-                        <h3>Editor <i class="fa-solid fa-star"></i></h3>
-
-                        <p>
-                            Vim like editor written in Rust. Made the UI with Ratatui and wrote the rest
-                            from scratch. Currently adding Vim motions.
-                        </p>
-
-                        <a href="https://github.com/crooksryan/editor" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Hover Mark <i class="fa-solid fa-star"></i></h3>
-
-                        <p>
-                            Neovim plugin written in Lua. Helps display marks in Neovim buffers to help make using marks easier to use.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/hover_mark.nvim" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Rust Listener</h3>
-
-                        <p>
-                            Project written in Rust to track actions within a current folder or directory. Currently a work in progess, but will be
-                            use to track and automate git actions.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/rust-listener" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Terminal Stock Ticker</h3>
-
-                        <p>
-                            Application written in Go that will display stock information in the terminal, including a pricing chart.
-                            Allows the user to write a custom config to display any stock they want.
-                        </p>
-
-                        <a href="https://github.com/rdawson46/musical-waffle" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>MinSQL</h3>
-
-                        <p>Simple SQL database written in C. Allows users to insert and query data from the terminal.</p>
-
-                        <a href="https://github.com/rdawson46/minSQL" target="_blank">Github >></a>
-                    </div>
-                    <div class="project hidden">
-                        <h3>Course Scheduler</h3>
-
-                        <p>
-                            Made with Java and SQL. Students can register for classes and view schedules.
-                            Admins can register students and classes and view student schedules.
-                        </p>
-
-
-                        <a href="https://github.com/rdawson46/CourseScheduler" target="_blank">Github >></a>
-                    </div>
-                </div>
-            </div>
-
+          </div>
+          <a :href="project.github" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </div>
     </div>
+  </section>
 </template>
 
 <style scoped>
-h2{
-    text-align: center;
-    letter-spacing: 0.1rem;
-    color: var(--secondary);
-    margin: 0 20%;
-    padding: 0;
-    font-size: 2rem;
-    border-bottom: 0.1rem solid;
-    border-image: linear-gradient(139deg, var(--accent), #de698c, #cb8ece,
-        #abb3ec, #a4cfea) 1;
+.projects-section {
+  padding: 6rem 2rem;
 }
 
-.section {
-    margin: 3rem 0;
-    min-height: calc(100vh - 60px);
-    height: fit-content;
+.projects-container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.project-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1rem 7rem;
+.projects-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text);
 }
 
-.project {
-    border-radius: 1rem;
-    background-color: var(--secondary40);
-    margin: 0 1rem 1rem 0;
-    padding: 0.25rem 1rem 0.75rem 1rem;
-    transition: all 450ms;
-    filter: grayscale(15%);
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
 }
 
-.project h3 {
-    margin: 0.5rem 0;
+.tab-btn {
+  background: transparent;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.project p {
-    margin-top: 0;
+.tab-btn.active, .tab-btn:hover {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
 }
 
-@media only screen and (min-width: 650px) {
-    .project {
-        width: 18rem;
-    }
-
-    .project-container:hover .project:hover {
-        filter: brightness(100%) grayscale(0);
-        background-color: var(--smallbackground);
-        border: solid var(--accent) 0.05rem;
-        box-shadow: 0 0 0 0;
-        scale: 115%;
-        z-index: 10;
-    }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-a {
-    background-image: linear-gradient(to right,
-            var(--accent),
-            var(--accent) 50%,
-            var(--text) 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    position: relative;
-    background-clip: initial;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3 ease-in-out;
+.project-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #2a2a2a;
 }
 
-a:before {
-    content: '';
-    background: var(--accent);
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-a:hover {
-    background-position: 0;
+.project-content {
+  padding: 1.5rem;
 }
 
-a:hover:before {
-    width: 100%;
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 900px) {
-    .project-container{
-        padding: 1rem 3.5rem;
-    }
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--secondary);
 }
 
-@media only screen and (max-width: 800px) {
-    .project-container{
-        padding: 1rem 1.75rem;
-    }
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-@media only screen and (max-width: 650px) {
-    .project-container {
-        flex-direction: column;
-        padding: 1rem 3rem;
-    }
-
-    .project {
-        margin: 1rem 0;
-    }
-
-    .button-holder {
-        padding: 0.5rem 2rem;
-    }
+.tech-tag {
+  background-color: #2a2a2a;
+  color: var(--text);
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
 }
 
+.project-link {
+  display: block;
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+}
 </style>

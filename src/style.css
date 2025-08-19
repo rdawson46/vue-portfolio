@@ -1,30 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
-    /*font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
-    font-family: 'Poppins';
-    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
     font-weight: 400;
+    font-size: 16px;
 
-    font-size: max(0.9vmax, 16px);
-    --text: #e0def4;
-    --background: #191724;
-    --smallbackground: #393552;
-    --primary: #194c6c;
-    --primary40: #194c6c40;
-    /*--primary: #594ebb;
-    --primary40: #594ebb20;*/
-    /*--secondary: #c4a7e7;
-    --secondary40: #c4a7e740;*/
-    --secondary: #d7827e;
-    --secondary40: #d7827e40;
-    --accent: #f6c177;
-    --secondary-accent: #56949f;
+    --text: #e0e0e0;
+    --background: #0a0a0a;
+    --primary: #007bff;
+    --accent: #007bff;
+    --card-background: #1a1a1a;
+    --tag-background: #2a2a2a;
 
-    color-scheme: light dark;
-
+    color-scheme: dark;
     color: var(--text);
-    background-color: var(--background);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -33,9 +23,9 @@
     -webkit-text-size-adjust: 100%;
 }
 
-html{
+html {
     scroll-behavior: smooth;
-    scroll-padding-top: 3.4rem;
+    scroll-padding-top: 4rem;
 }
 
 body {
@@ -43,64 +33,127 @@ body {
     max-width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
+    background-color: var(--background);
+    color: var(--text);
 }
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
+    color: var(--text);
 }
 
-h1{
-    font-size: 2.5rem;
+h1 {
+    font-size: 3.5rem;
     text-align: center;
-    color: var(--accent);
-    letter-spacing: 0.1rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
 }
 
-
-/*
-@media (prefers-color-scheme: light) {
-    :root {
-        --text: #0e1c25;
-        --background: #f6e2d5;
-        --primary: #194c6c;
-        --secondary: #f1916d;
-        --accent: #2d8bc6;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
-*/
 
-::-webkit-scrollbar{
-    width: 0.25rem;
-    background-color: #343434;
+section {
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 0.125rem;
-    transition: all 150ms;
+    background: var(--primary);
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
+    background: #0056b3;
 }
 
-.hidden{
-  opacity: 0%;
-  filter: blur(5px) brightness(0);
-  transition: all 350ms ease-out;
+.blob-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
 }
 
-.show{
-  opacity: 100%;
-  filter: blur(0) brightness(1);
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+}
+
+.blob:nth-child(1) {
+    width: 400px;
+    height: 400px;
+    background-color: var(--primary);
+    top: -100px;
+    left: -100px;
+    animation: blob-move 15s infinite alternate;
+}
+
+.blob:nth-child(2) {
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary);
+    bottom: -50px;
+    right: -50px;
+    animation: blob-move 20s infinite alternate-reverse;
+}
+
+.blob:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    background-color: var(--primary);
+    top: 50%;
+    left: 50%;
+    animation: blob-move 10s infinite alternate;
+}
+
+/*
+@keyframes blob-move {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    to {
+        transform: translate(100px, 100px) scale(1.2);
+    }
+}
+*/
+@keyframes blob-move {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(100px, 100px) scale(1.2);
+    }
+
+    50% {
+        transform: translate(50px, 100px) scale(0.8);
+    }
+    100% {
+        transform: translate(100px, 50px) scale(1.3);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }

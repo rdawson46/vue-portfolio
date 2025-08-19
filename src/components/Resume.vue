@@ -1,439 +1,142 @@
-<script setup>
-import { ref, onMounted } from 'vue';
-
-const exp_ind = ref(0);
-
-onMounted(() => {
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('show');
-      } else{
-        entry.target.classList.remove('show');
-      }
-    });
-  })
-
-  const hidden = document.querySelectorAll('.hidden');
-
-  hidden.forEach((element)=> observer.observe(element));
-})
-</script>
-
 <template>
-    <div class="section">
-        <h1>Resume</h1>
-        <div class="grid">
-            <div class="box education hidden">
-                <h2 class="title">Education</h2>
-                <h3 class="sub-title">Pennsylvania State University</h3>
-                <ul>
-                    <li>Computer Science, B.S.</li>
-                    <li>Graduation Date: May 2024</li>
-                </ul>
+  <section id="resume" class="resume-section">
+    <div class="resume-container">
+      <h2 class="resume-title">My Resume</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3 class="timeline-title">Experience</h3>
+            <div class="experience-item">
+              <p class="timeline-subtitle">BNY, AI Hub</p>
+              <p class="timeline-date">Aug 2024 - Current</p>
+              <p class="timeline-text">Data Science Analyst</p>
             </div>
-            <div class="box courses hidden">
-                <h2 class="title">Relevant Courses</h2>
-                <ul>
-                    <li>Systems Programming</li>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Web Development</li>
-                    <li>Programming Language Concepts</li>
-                    <li>Operating Systems Design</li>
-                    <li>Numerical Computations</li>
-                    <li>Compiler Construction</li>
-                    <li>Programming Models for Big Data</li>
-                </ul>
+            <div class="experience-item">
+              <p class="timeline-subtitle">BNY</p>
+              <p class="timeline-date">May 2023 - Aug 2023</p>
+              <p class="timeline-text">START Intern Program, Data Science</p>
             </div>
-            <div class="box contact hidden">
-                <h2 class="title">Contact</h2>
-                <p>
-                    I can be best reached on my LinkedIn page: 
-                    <br>
-                    <a href="https://www.linkedin.com/in/ryan-crooks/" target="_blank" rel="noreferrer">
-                        LinkedIn
-                    </a>
-
-                </p>
-            </div>
-            <div class="box experience hidden">
-                <h2 class="title">Experience</h2>
-
-                <Transition name='fade' mode='out-in'>
-                    <div v-if='exp_ind == 0'>
-                        <h3 class="sub-title">BNY Mellon</h3>
-                        <h4 class="job-title"> Data Science Analyst<br>Aug 2024 - Current</h4>
-                        <ul>
-                            <li>Full time program focused on development</li>
-                            <li>Recenly started and will be updated over time</li> 
-                        </ul>
-                    </div>
-                    <div v-else-if='exp_ind == 1'>
-                        <h3 class="sub-title">BNY Mellon</h3>
-                        <h4 class="job-title">START Intern Program, Data Science<br>May 2023 - Aug 2023</h4>
-                        <ul>
-                            <li>Used open source projects to leverage generative AI</li>
-                            <li>Developed an API to convert text data into a structured data object</li>
-                            <li>Wrote a research paper on embedding vectors and presented to a team of engineers</li>
-                        </ul>
-                    </div>
-                </Transition>
-                <div class="btn-holder">
-                    <button class="btn" :class="{ active: exp_ind == 0 }" @click="exp_ind=0"></button>
-                    <button class="btn" :class="{ active: exp_ind == 1 }" @click="exp_ind=1"></button>
-                </div>
-            </div>
-            <div class="box skills hidden">
-                <h2 class="title">Skills</h2>
-                <ul class="major">
-                    <li>
-                        <div class="icon"><i class="fa-solid fa-server"></i></div>
-                        <div class="descr">
-                            <h2 class="title">Back-End</h2>
-                            <ul>
-                                <li>Rust</li>
-                                <li>Python</li>
-                                <li>JavaScript</li>
-                                <li>PostgreSQL</li>
-                                <li>Go</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon"><i class="fa-solid fa-desktop"></i></div>
-                        <div class="descr">
-                            <div class="title">Front-End</div>
-                            <ul>
-                                <li>Vue.JS</li>
-                                <li>HTML</li>
-                                <li>CSS </li>
-                                <li>React</li>
-                                <li>JQuery</li>
-                            </ul>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon"><i class="fa-solid fa-code"></i></div>
-                        <div class="descr">
-                            <div class="title">Tools</div>
-                            <ul>
-                                <li>NixOS/Linux</li>
-                                <li>Windows</li>
-                                <li>Firebase</li>
-                                <li>Neovim</li>
-                                <li>Git</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+          </div>
         </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3 class="timeline-title">Education</h3>
+            <p class="timeline-subtitle">Pennsylvania State University</p>
+            <p class="timeline-date">May 2024</p>
+            <p class="timeline-text">Bachelor of Science in Computer Science</p>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      <div class="resume-download">
+        <a href="/resume.pdf" download class="btn btn-primary">Download Resume</a>
+      </div>
+      -->
     </div>
+  </section>
 </template>
 
 <style scoped>
-.btn-holder{
-    display: flex;
-    justify-content: center;
+.resume-section {
+  padding: 6rem 2rem;
 }
 
-.btn{
-    background-color: var(--secondary);
-    height: 1rem;
-    width: 2rem;
-    border-radius: 1.5rem;
-    border: none;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    margin: 0 0.5rem;
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.btn:hover{
-    background-color: var(--accent);
-    box-shadow: 0px 15px 20px rgba(162, 206, 234, 0.9);
-    transform: translateY(-2px);
+.resume-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text);
 }
 
-.active{
-    background-color: var(--accent);
+.timeline {
+  position: relative;
+  padding: 2rem 0;
 }
 
-h1{
-    color: var(--accent);
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 2px;
+  background: var(--primary);
 }
 
-.section{
-    margin: 5rem 0;
-    min-height: calc(100vh - 60px);
-    height: fit-content;
+.timeline-item {
+  margin-bottom: 3rem;
+  position: relative;
+  padding-left: 60px;
 }
 
-.grid{
-    display: grid;
-    gap: 1.5rem;
-    padding: 0.75rem 7.5rem 1.5rem 7.5rem;
-}
-
-.box{
-    border-radius: 1.5rem;
-    padding: 1rem;
-    /*border: solid 0.1rem var(--accent);*/
-    background-color: var(--primary40);
-}
-
-.courses{
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.education{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.contact{
-    grid-column: 3;
-    grid-row: 1;
-    background-color: var(--secondary40);
-}
-
-.experience{
-    grid-column: 1/4;
-    grid-row: 2;
-}
-
-.skills {
-    grid-row: 3;
-    grid-column: 1/4;
-}
-
-/*
-@media (prefers-color-scheme: light){
-    .contact{
-        color: var(--background)
-    }
-
-    .grid{
-        color: var(--background);
-    }
-
-    .eduction{
-        color: var(--primary);
-    }
-}
-*/
-
-.title{
-    margin: 0.5rem 0;
-}
-
-.sub-title{
-    margin: 0.5rem 0;
-}
-
-.job-title{
-    margin: 0.25rem;
-}
-
-a{
-    background-image: linear-gradient(
-        to right,
-        var(--accent),
-        var(--accent) 50%,
-        var(--accent)50%
-    );
-    font-weight: bold;
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    position: relative;
-    background-clip: initial;
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3 ease-in-out;
-}
-
-a:before{
+.timeline-item::before {
     content: '';
-    background: var(--accent);
-    display: block;
     position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
-}
-
-a:hover{
-    background-position: 0;
-}
-
-a:hover:before{
-    width: 100%;
-}
-
-@media only screen and (max-width: 1050px) {
-    .grid{
-        padding: 0.75rem 6.25rem 1.5rem 6.25rem;
-    }
-
-    .courses, .contact, .experience{
-        grid-column: 1;
-    }
-
-    .courses{
-        grid-column: 1/3;
-        grid-row: 2;
-    }
-
-    .eduction{
-        grid-row: 1;
-    }
-
-    .contact{
-        grid-row: 1;
-        grid-column: 2;
-    }
-
-    .experience{
-        grid-row: 3;
-        grid-column: 1/3;
-    }
-
-    .skills {
-        grid-row: 4;
-    }
-}
-
-@media only screen and (max-width: 780px) {
-    .grid{
-        padding: 10px 25px 25px 25px;
-    }
-
-    .courses, .education, .contact, .experience, .skills{
-        grid-column: 1;
-    }
-
-    .courses{
-        grid-row: 2;
-    }
-
-    .education{
-        grid-row: 1;
-    }
-
-    .contact{
-        grid-row: 3;
-    }
-
-    .experience{
-        grid-row: 4;
-    }
-
-    .skills{
-        grid-row: 5;
-    }
-}
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: all 250ms;
-}
-
-.fade-enter-active, .fade-enter-from{
-    transition-delay:  150ms;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-}
-
-.major {
-    width: min(60rem, 90%);
-    margin-inline: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
-}
-
-.major > li {
-    max-width: 12rem;
-    justify-self: center;
-    display: grid;
-    grid-template:
-    "icon"
-    "line"
-    "dot"
-    "title"
-    "descr" 1fr;
-    justify-items: center;
-    align-items: flex-start;
-}
-
-.major > li .icon {
-    grid-area: icon;
-    width: 6rem;
-    aspect-ratio: 1;
-    display: grid;
-    place-items: center;
-    color: var(--secondary);
-    font-size: 2.5rem;
-    border: 0.1rem solid var(--accent);
+    left: 12px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background: var(--primary);
-    box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45), inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
+    border: 2px solid var(--background);
 }
 
-.major > li::before {
-    content: "";
-    grid-area: line;
-    height: 2.5rem;
-    border-right: 2px dashed var(--secondary-accent);
+.timeline-content {
+  padding-left: 2rem;
 }
 
-.major > li::after {
-    content: "";
-    grid-area: dot;
-    width: 1rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: var(--secondary);
-    justify-self: center;
-    margin-bottom: 0.5rem;
+.timeline-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
 }
 
-.major > li .title {
-    grid-area: title;
-    margin-block: 0.5rem;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
+.timeline-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--secondary);
+  margin-bottom: 0.2rem;
 }
 
-.descr{
-    background-color: var(--background);
-    border-radius: 1.75rem;
-    padding: 0.75rem 1rem;
-    border: 0.1rem solid var(--secondary-accent);
-    box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45), inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 500px){
-    .container{
-        flex-direction: column;
-        justify-content: center;
-    }
+.experience-item {
+  margin-bottom: 1.5rem;
+}
 
-    .field{
-        width: 15rem;
-    }
+.resume-download {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
 }
 </style>

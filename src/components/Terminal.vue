@@ -62,7 +62,7 @@ onMounted(()=>{
             </div>
             <div class="output">
                 <h2 id="output1">Hi, I'm Ryan</h2>
-                <h3 id="output2">Data Science Analyst at BNY Mellon, AI Hub</h3>
+                <h3 id="output2">Data Science Analyst at BNY, AI Hub</h3>
             </div>
             <div class="terminal-prompt" v-if="activeLine==2">
                 <span class="terminal-user">ryancrooks@admin:</span>

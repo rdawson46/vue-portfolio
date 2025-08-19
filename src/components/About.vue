@@ -1,129 +1,85 @@
-<script setup>
-import { ref, onMounted } from 'vue';
-
-const exp_ind = ref(0);
-
-onMounted(() => {
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('show');
-      } else{
-        entry.target.classList.remove('show');
-      }
-    });
-  })
-
-  const hidden = document.querySelectorAll('.hidden');
-
-  hidden.forEach((element)=> observer.observe(element));
-})
-</script>
-
 <template>
-    <div class="section">
-        <h1>About Me</h1>
-
-        <div class="container">
-            <div class="image-holder hidden">
-                <i class="fa-solid fa-circle-user"></i>
-            </div>
-            <div class="text-holder hidden">
-                <p>
-                Hi, I’m Ryan, a Computer Science graduate from Penn State University with seven years of coding experience.
-                My expertise spans web development, systems programming, data science, and generative AI.
-                I strive to stay current with popular frameworks and libraries, always working toward my goal of becoming a skilled back-end developer.
-                </p>
- 
-                <p>
-                Currently, I’m a Data Science Analyst at the AI Hub at the Bank of New York Mellon.
-                I’m passionate about continuous learning and problem-solving, always eager to improve and grow in this ever-evolving field.
-                </p>
-
-                <p>
-                Originally from Pittsburgh, I’ve also spent time in Tempe, AZ and State College, PA. When I’m not coding, I enjoy running (currently training for my second marathon), cooking for friends and family, and following sports like the NBA, NFL, Formula 1, and college athletics. I’m also an avid snowboarder, making the most of Pennsylvania’s snowy winters.
-                </p>
-            </div>
-        </div>
+  <section id="about-me" class="about-section">
+    <div class="about-container">
+      <div class="about-content">
+        <h2 class="about-title">About Me</h2>
+        <p class="about-text">
+          I'm a software engineer with a passion for building functional applications.
+          I have a strong background in both front-end and back-end development, and I'm always eager to learn new technologies.
+        </p>
+        <p class="about-text">
+          I'm currently working as a Data Science Analyst at BNY, where I'm helping to build the next generation of financial applications with generative AI.
+          I'm also a recent graduate of Penn State University, where I earned a degree in Computer Science.
+        </p>
+      </div>
+      <div class="about-skills">
+        <h3 class="skills-title">My Skills</h3>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>Go</li>
+          <li>Rust</li>
+          <li>JavaScript</li>
+          <li>Vue.js</li>
+          <li>PostgreSQL</li>
+          <li>Firebase</li>
+        </ul>
+      </div>
     </div>
+  </section>
 </template>
 
 <style scoped>
-
-p{
-    text-indent: 2rem;
+.about-section {
+  padding: 6rem 2rem;
 }
 
-h1{
-    color: var(--accent)
+.about-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.section::before{
-    content: '';
-    height: 10px;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient(
-        139deg,
-        #194c6c,
-        #364f7e,
-        #584f89,
-        #7b4c8a,
-        #9c4781,
-        #b5456e,
-        #c44d55,
-        var(--accent)
-    );
-    position: absolute;
-    display: block;
-    top: -30px;
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text);
 }
 
-.section{
-    margin: 25px 0;
-    min-height: 80vh;
-    height: fit-content;
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--secondary);
 }
 
-.container{
-    display: flex;
-    padding-left: 7rem;
-    padding-right: 7rem;
+.skills-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
 }
 
-.image-holder{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    place-items: center;
-    text-align: center;
-    margin: 0 15px;
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.text-holder{
-    margin: 0 30px;
+.skills-list li {
+  background-color: var(--tag-background);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
 }
 
-@media only screen and (max-width: 850px) {
-    .container{
-        flex-direction: column;
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-
-    .text-holder{
-        margin: 0 5px;
-    }
-}
-
-i{
-    aspect-ratio: 1;
-    font-size: 12.5rem;
-    border: 0.25rem solid var(--secondary-accent);
-    border-radius: 50%;
-    /*padding: 2.5rem;*/
-    color: var(--primary);
-    background-color: var(--accent);
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
 </style>

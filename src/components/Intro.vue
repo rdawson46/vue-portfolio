@@ -1,76 +1,89 @@
-<script setup>
-import Terminal from './Terminal.vue';
-import { onMounted, ref } from 'vue';
-
-const svg = ref(false);
-const always = ref(true);
-
-
-onMounted(()=>{
-    const blanket = document.getElementById('blanket');
-
-    setTimeout(()=>{
-        svg.value = true;
-
-        blanket.classList.add('clear');
-    }, 1750);
-});
-
-</script>
-
 <template>
-    <div class="background">
-        <div id="blanket" class="cover"></div>
-        <Terminal/>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Ryan Crooks</h1>
+      <div class="hero-sub">
+        <p class="hero-subtitle">Data Scientist & Software Developer</p>
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+      </div>
     </div>
+  </section>
 </template>
 
 <style scoped>
-.cover{
-    width: 100%;
-    height: 100%;
-    background-color: var(--background);
-    position: absolute;
-    z-index: -1;
-    transition: all 750ms;
+.hero {
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.clear{
-    background-color: transparent;
+.hero-content {
+  max-width: 800px;
 }
 
-.background{
-    display: flex;
-    place-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100vh;
+.hero-title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+  animation: fade-down 750ms ease-out;
 }
 
-.background::before{
-    content: "";
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: -1;
-    /*background-image: url('./../assets/low-poly-grid-haikei.svg');*/
-    background-image: url('./../assets/blob-scene-haikei.svg');
-    background-size: cover;
-    background-position: center;
+.hero-sub {
+  animation: fade-up 750ms ease-out;
 }
 
-
-h1{
-    font-size: 48px;
-    margin-bottom: 0;
-    margin-top: 32px;
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: var(--secondary);
 }
 
-h2{
-    font-size: 32px;
-    margin-top: 0;
-    margin-bottom: 32px;
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+@keyframes fade-down {
+    0% {
+        translate: 0 -25px;
+        opacity: 0;
+    }
+
+    100% {
+        transition: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-up {
+    0% {
+        translate: 0 25px;
+        opacity: 0;
+    }
+
+    100% {
+        transition: 0;
+        opacity: 1;
+    }
+}
+
 </style>
