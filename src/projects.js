@@ -57,6 +57,26 @@ export const projects = {
       technologies: ['JavaScript', 'Vue.js', 'Firebase']
     }
   ],
+  go: [
+    {
+      title: 'LLM Dashboard',
+      description: 'LLM Application with a Go server and Vue.js front end. Enables users to interact with a local LLM and leverage tools, such as web search and python code execution.',
+      github: 'https://github.com/rdawson46/dashboard',
+      technologies: ['Go', 'SQLite', 'Ollama', 'JWT']
+    },
+    {
+      title: 'Terminal Stock Ticker',
+      description: 'Application written in Go that will display stock information in the terminal, including a pricing chart. Allows the user to write a custom config to display any stock they want.',
+      github: 'https://github.com/rdawson46/musical-waffle',
+      technologies: ['Go', 'Bubble Tea']
+    },
+    {
+      title: 'Image Conversion',
+      description: 'Simple HTTP server with a Vue.js front-end that allows users to upload an image and convert them into ASCII art.',
+      github: 'https://github.com/rdawson46/image-conversion',
+      technologies: ['Go', 'Vue']
+    }
+  ],
   others: [
     {
       title: 'Editor',
@@ -71,28 +91,10 @@ export const projects = {
       technologies: ['Lua', 'Neovim']
     },
     {
-      title: 'Rust Listener',
-      description: 'Project written in Rust to track actions within a current folder or directory. Currently a work in progess, but will be use to track and automate git actions.',
-      github: 'https://github.com/rdawson46/rust-listener',
+      title: 'Rust Huffman',
+      description: 'Huffman encoding implemented in Rust.',
+      github: 'https://github.com/rdawson46/rust-huffman',
       technologies: ['Rust']
     },
-    {
-      title: 'Terminal Stock Ticker',
-      description: 'Application written in Go that will display stock information in the terminal, including a pricing chart. Allows the user to write a custom config to display any stock they want.',
-      github: 'https://github.com/rdawson46/musical-waffle',
-      technologies: ['Go']
-    },
-    {
-      title: 'MinSQL',
-      description: 'Simple SQL database written in C. Allows users to insert and query data from the terminal.',
-      github: 'https://github.com/rdawson46/minSQL',
-      technologies: ['C', 'SQL']
-    },
-    {
-      title: 'Course Scheduler',
-      description: 'Made with Java and SQL. Students can register for classes and view schedules. Admins can register students and classes and view student schedules.',
-      github: 'https://github.com/rdawson46/CourseScheduler',
-      technologies: ['Java', 'SQL']
-    }
   ]
 };

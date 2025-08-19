@@ -23,6 +23,13 @@ const setActiveTab = (tab) => {
         </button>
         <button
           class="tab-btn"
+          :class="{ active: activeTab === 'go' }"
+          @click="setActiveTab('go')"
+        >
+          Go
+        </button>
+        <button
+          class="tab-btn"
           :class="{ active: activeTab === 'javascript' }"
           @click="setActiveTab('javascript')"
         >
