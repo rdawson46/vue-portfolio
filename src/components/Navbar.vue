@@ -57,12 +57,13 @@ header {
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid transparent;
 }
 
 header.scrolled {
-  background-color: rgba(18, 18, 18, 0.7);
+  background-color: rgba(38, 28, 21, 0.85);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--card-background);
   padding: 1rem 2rem;
 }
 
@@ -72,14 +73,16 @@ header.scrolled {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .nav-links a {
   color: var(--text);
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -89,10 +92,12 @@ header.scrolled {
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: 0;
-  height: 2px;
+  width: 100%;
+  height: 1px;
   background-color: var(--primary);
-  transition: width 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .nav-links a:hover {
@@ -100,7 +105,8 @@ header.scrolled {
 }
 
 .nav-links a:hover::after {
-  width: 100%;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav-socials {
@@ -110,7 +116,7 @@ header.scrolled {
 
 .social-icon {
   fill: var(--text);
-  height: 24px;
+  height: 22px;
   transition: fill 0.3s ease;
 }
 
@@ -130,21 +136,24 @@ header.scrolled {
 
 .bar {
   width: 25px;
-  height: 3px;
+  height: 2px;
   background-color: var(--text);
   transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .nav-links, .nav-socials {
     display: none;
+  }
+
+  .nav-links {
     flex-direction: column;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 60%;
-    background-color: var(--card-background);
+    width: 70%;
+    background-color: var(--background);
     padding: 6rem 2rem 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;

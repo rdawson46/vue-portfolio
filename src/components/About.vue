@@ -31,6 +31,7 @@
 <style scoped>
 .about-section {
   padding: 6rem 2rem;
+  background-color: var(--background);
 }
 
 .about-container {
@@ -40,25 +41,41 @@
   align-items: start;
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+}
+
+.about-container::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  right: -2rem;
+  top: -2rem;
+  bottom: -2rem;
+  background-color: var(--card-background);
+  z-index: -1;
+  border: 1px solid var(--accent);
 }
 
 .about-title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: var(--text);
+  font-family: 'Raleway', sans-serif;
 }
 
 .about-text {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  color: var(--secondary);
+  color: var(--text);
+  opacity: 0.9;
 }
 
 .skills-title {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: var(--text);
+  font-family: 'Raleway', sans-serif;
 }
 
 .skills-list {
@@ -71,9 +88,18 @@
 
 .skills-list li {
   background-color: var(--tag-background);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-left: 3px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+  background-color: var(--primary);
+  color: var(--background);
+  transform: translateX(5px);
 }
 
 @media (max-width: 768px) {
