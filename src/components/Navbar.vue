@@ -1,17 +1,19 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 const isMenuOpen = ref(false);
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50;
+};
 
 onMounted(() => {
-  const nav = document.getElementById('navbar');
-  document.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
 });
 
 const toggleMenu = () => {
@@ -20,7 +22,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header id="navbar" :class="{ 'menu-open': isMenuOpen }">
+  <header id="navbar" :class="{ 'menu-open': isMenuOpen, 'scrolled': isScrolled }">
     <a href="/" class="logo">
       <img src="/logoThing.png" alt="Logo" />
     </a>
@@ -57,13 +59,29 @@ header {
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease-in-out;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
   border-bottom: 1px solid transparent;
 }
 
-header.scrolled {
+header.scrolled::before {
   background-color: rgba(38, 28, 21, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--card-background);
+}
+
+header.scrolled {
   padding: 1rem 2rem;
 }
 
