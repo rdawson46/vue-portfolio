@@ -8,13 +8,10 @@
             <h3 class="timeline-title">Experience</h3>
             <div class="experience-item">
               <p class="timeline-subtitle">BNY, AI Hub</p>
-              <p class="timeline-date">Aug 2024 - Current</p>
               <p class="timeline-text">Data Science Analyst</p>
-            </div>
-            <div class="experience-item">
-              <p class="timeline-subtitle">BNY</p>
-              <p class="timeline-date">May 2023 - Aug 2023</p>
+              <p class="timeline-date">Aug 2024 - Current</p>
               <p class="timeline-text">START Intern Program, Data Science</p>
+              <p class="timeline-date">May 2023 - Aug 2023</p>
             </div>
           </div>
         </div>
@@ -23,17 +20,12 @@
           <div class="timeline-content">
             <h3 class="timeline-title">Education</h3>
             <p class="timeline-subtitle">Pennsylvania State University</p>
-            <p class="timeline-date">May 2024</p>
             <p class="timeline-text">Bachelor of Science in Computer Science</p>
+            <p class="timeline-date">May 2024</p>
           </div>
         </div>
       </div>
 
-      <!--
-      <div class="resume-download">
-        <a href="/resume.pdf" download class="btn btn-primary">Download Resume</a>
-      </div>
-      -->
     </div>
   </section>
 </template>
@@ -53,37 +45,29 @@
   text-align: center;
   margin-bottom: 3rem;
   color: var(--text);
+  font-family: 'Raleway', sans-serif;
 }
 
 .timeline {
   position: relative;
   padding: 2rem 0;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 20px;
-  height: 100%;
-  width: 2px;
-  background: var(--primary);
+  border-left: 2px solid var(--primary);
 }
 
 .timeline-item {
   margin-bottom: 3rem;
   position: relative;
-  padding-left: 60px;
+  padding-left: 40px;
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 12px;
+    left: -9px;
     top: 5px;
     width: 16px;
     height: 16px;
-    border-radius: 50%;
+    border-radius: 0;
     background: var(--primary);
     border: 2px solid var(--background);
 }
@@ -94,26 +78,32 @@
 
 .timeline-title {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Raleway', sans-serif;
 }
 
 .timeline-subtitle {
   font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--secondary);
+  font-weight: 600;
+  color: var(--text);
   margin-bottom: 0.2rem;
 }
 
 .timeline-date {
   font-size: 0.9rem;
-  color: var(--secondary);
+  color: var(--text);
+  opacity: 0.7;
   margin-bottom: 1rem;
 }
 
+.timeline-text {
+    color: var(--text);
+}
+
 .experience-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .resume-download {
@@ -123,20 +113,22 @@
 
 .btn {
   padding: 1rem 2.5rem;
-  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   display: inline-block;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--text);
+  border-radius: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.btn-primary {
+.btn:hover {
   background-color: var(--primary);
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-  transform: translateY(-3px);
+  color: var(--background);
+  border-color: var(--primary);
 }
 </style>

@@ -18,6 +18,7 @@
 .footer {
   padding: 4rem 2rem;
   text-align: center;
+  border-top: 1px solid var(--card-background);
 }
 
 .footer-container {
@@ -30,7 +31,7 @@
 }
 
 .footer-socials a {
-  color: var(--secondary);
+  color: var(--text);
   font-size: 1.8rem;
   margin: 0 1.5rem;
   transition: color 0.3s ease;
@@ -42,6 +43,7 @@
 
 .footer-text {
   font-size: 1rem;
-  color: var(--secondary);
+  color: var(--text);
+  opacity: 0.8;
 }
 </style>

@@ -1,17 +1,19 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 const isMenuOpen = ref(false);
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50;
+};
 
 onMounted(() => {
-  const nav = document.getElementById('navbar');
-  document.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
 });
 
 const toggleMenu = () => {
@@ -20,7 +22,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header id="navbar" :class="{ 'menu-open': isMenuOpen }">
+  <header id="navbar" :class="{ 'menu-open': isMenuOpen, 'scrolled': isScrolled }">
     <a href="/" class="logo">
       <img src="/logoThing.png" alt="Logo" />
     </a>
@@ -59,10 +61,27 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-header.scrolled {
-  background-color: rgba(18, 18, 18, 0.7);
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  border-bottom: 1px solid transparent;
+}
+
+header.scrolled::before {
+  background-color: rgba(38, 28, 21, 0.85);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--card-background);
+}
+
+header.scrolled {
   padding: 1rem 2rem;
 }
 
@@ -72,14 +91,16 @@ header.scrolled {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .nav-links a {
   color: var(--text);
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -89,10 +110,12 @@ header.scrolled {
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: 0;
-  height: 2px;
+  width: 100%;
+  height: 1px;
   background-color: var(--primary);
-  transition: width 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .nav-links a:hover {
@@ -100,7 +123,8 @@ header.scrolled {
 }
 
 .nav-links a:hover::after {
-  width: 100%;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav-socials {
@@ -110,7 +134,7 @@ header.scrolled {
 
 .social-icon {
   fill: var(--text);
-  height: 24px;
+  height: 22px;
   transition: fill 0.3s ease;
 }
 
@@ -130,21 +154,24 @@ header.scrolled {
 
 .bar {
   width: 25px;
-  height: 3px;
+  height: 2px;
   background-color: var(--text);
   transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .nav-links, .nav-socials {
     display: none;
+  }
+
+  .nav-links {
     flex-direction: column;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 60%;
-    background-color: var(--card-background);
+    width: 70%;
+    background-color: var(--background);
     padding: 6rem 2rem 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
