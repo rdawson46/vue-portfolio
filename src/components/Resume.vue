@@ -8,8 +8,10 @@
             <h3 class="timeline-title">Experience</h3>
             <div class="experience-item">
               <p class="timeline-subtitle">BNY, AI Hub</p>
+              <p class="timeline-text">AI Engineering Associate</p>
+              <p class="timeline-date">Sep 2026 - Current</p>
               <p class="timeline-text">Data Science Analyst</p>
-              <p class="timeline-date">Aug 2024 - Current</p>
+              <p class="timeline-date">Aug 2024 - Aug 2026</p>
               <p class="timeline-text">START Intern Program, Data Science</p>
               <p class="timeline-date">May 2023 - Aug 2023</p>
             </div>
