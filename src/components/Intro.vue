@@ -12,96 +12,100 @@
 
 <style scoped>
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background:
-    linear-gradient(to right, rgba(198, 94, 56, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(198, 94, 56, 0.1) 1px, transparent 1px);
-  background-size: 4rem 4rem;
   padding: 0 2rem;
+  position: relative;
 }
 
 .hero-content {
   max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  font-size: 5.5rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
   color: var(--text);
+  line-height: 1.08;
   animation: fade-down 1s ease-out;
 }
 
 .hero-subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 4rem;
-  color: var(--text);
-  opacity: 0.8;
-  animation: fade-up 1s ease-out 0.5s backwards;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 3.5rem;
+  color: var(--secondary);
+  animation: fade-up 1s ease-out 0.4s backwards;
 }
 
 .scroll-down-link {
-  display: inline-block;
-  animation: fade-up 1s ease-out 1s backwards;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: fade-up 1s ease-out 0.8s backwards;
+  cursor: pointer;
+}
+
+.scroll-down-link:hover {
+  color: var(--primary-hover);
+  transform: translateY(4px);
 }
 
 .arrow {
   display: block;
-  width: 20px;
-  height: 20px;
-  border-left: 2px solid var(--primary);
-  border-bottom: 2px solid var(--primary);
+  width: 14px;
+  height: 14px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   transform: rotate(-45deg);
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0) rotate(-45deg);
-  }
-  40% {
-    transform: translateY(10px) rotate(-45deg);
-  }
-  60% {
-    transform: translateY(5px) rotate(-45deg);
-  }
 }
 
 @keyframes fade-down {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-24px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes fade-up {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 3.6rem;
   }
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 2.5rem;
   }
 }
 </style>
