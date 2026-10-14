@@ -9,7 +9,7 @@
           <i class="fab fa-github"></i>
         </a>
       </div>
-      <p class="footer-text">Ryan Crooks - 2025</p>
+      <p class="footer-text">Ryan Crooks - 2026</p>
     </div>
   </footer>
 </template>
@@ -18,11 +18,11 @@
 .footer {
   padding: 4rem 2rem;
   text-align: center;
-  border-top: 1px solid var(--card-background);
+  border-top: 1px solid var(--border);
 }
 
 .footer-container {
-  max-width: 1000px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
@@ -34,16 +34,17 @@
   color: var(--text);
   font-size: 1.8rem;
   margin: 0 1.5rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
 .footer-socials a:hover {
   color: var(--primary);
+  transform: translateY(-2px);
 }
 
 .footer-text {
-  font-size: 1rem;
-  color: var(--text);
-  opacity: 0.8;
+  font-size: 0.95rem;
+  color: var(--text-muted);
 }
 </style>

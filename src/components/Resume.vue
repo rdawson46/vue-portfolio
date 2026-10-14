@@ -43,94 +43,92 @@
 }
 
 .resume-title {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   color: var(--text);
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .timeline {
   position: relative;
-  padding: 2rem 0;
+  padding: 1rem 0;
   border-left: 2px solid var(--primary);
+  margin-left: 1rem;
 }
 
 .timeline-item {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   position: relative;
-  padding-left: 40px;
+  padding-left: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -9px;
-    top: 5px;
-    width: 16px;
-    height: 16px;
-    border-radius: 0;
-    background: var(--primary);
-    border: 2px solid var(--background);
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--background);
+  transform: translateX(-50%) translateX(-1px);
 }
 
 .timeline-content {
-  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .timeline-title {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   color: var(--text);
-  margin-bottom: 1.5rem;
-  font-family: 'Raleway', sans-serif;
+  margin: 0 0 1.5rem;
+  font-family: var(--font-heading);
 }
 
 .timeline-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 0.2rem;
+  margin: 0 0 0.5rem;
+}
+
+.timeline-text {
+  color: var(--secondary);
+  font-weight: 500;
+  font-size: 1.05rem;
+  margin: 0 0 0.2rem;
 }
 
 .timeline-date {
   font-size: 0.9rem;
-  color: var(--text);
-  opacity: 0.7;
-  margin-bottom: 1rem;
-}
-
-.timeline-text {
-    color: var(--text);
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
 }
 
 .experience-item {
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.resume-download {
-  text-align: center;
-  margin-top: 3rem;
+.experience-item .timeline-date:last-child {
+  margin-bottom: 0;
 }
 
-.btn {
-  padding: 1rem 2.5rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: inline-block;
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--text);
-  border-radius: 0;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.btn:hover {
-  background-color: var(--primary);
-  color: var(--background);
-  border-color: var(--primary);
+@media (max-width: 768px) {
+  .timeline {
+    margin-left: 0.5rem;
+  }
+  .timeline-item {
+    padding-left: 1.75rem;
+  }
 }
 </style>

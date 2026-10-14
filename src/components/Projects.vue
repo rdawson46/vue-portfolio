@@ -69,114 +69,142 @@ const setActiveTab = (tab) => {
 }
 
 .projects-container {
-  max-width: 1000px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
 .projects-title {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   text-align: center;
   margin-bottom: 3rem;
   color: var(--text);
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .tabs {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   margin-bottom: 3rem;
 }
 
 .tab-btn {
   background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--text);
-  padding: 0.7rem 1.5rem;
-  border-radius: 0;
+  border: none;
+  color: var(--text-muted);
+  padding: 0.6rem 1.4rem;
   cursor: pointer;
   font-weight: 600;
-  text-transform: uppercase;
+  font-size: 0.9rem;
   letter-spacing: 0.05em;
-  transition: all 0.3s ease;
+  position: relative;
+  transition: color 0.2s ease;
 }
 
-.tab-btn.active, .tab-btn:hover {
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: var(--radius-pill);
   background-color: var(--primary);
-  color: var(--background);
-  border-color: var(--primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.tab-btn:hover {
+  color: var(--text);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+}
+
+.tab-btn.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
 }
 
 .project-card {
   background-color: var(--card-background);
-  border: 1px solid var(--accent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
 }
 
 .project-content {
-  padding: 1.5rem;
+  padding: 2.25rem 2rem;
 }
 
 .project-title {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 600;
   color: var(--text);
-  margin-bottom: 1rem;
-  font-family: 'Raleway', sans-serif;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-heading);
 }
 
 .project-description {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.98rem;
+  line-height: 1.65;
   margin-bottom: 1.5rem;
-  color: var(--text);
-  opacity: 0.9;
+  color: var(--text-muted);
 }
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .tech-tag {
   background-color: var(--tag-background);
-  color: var(--text);
-  padding: 0.3rem 0.8rem;
+  color: var(--tag-text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.85rem;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .project-link {
   display: block;
-  background-color: var(--primary);
-  color: var(--background);
+  background-color: rgba(200, 100, 70, 0.1);
+  color: var(--text);
+  border-top: 1px solid var(--border);
   text-align: center;
   padding: 1rem;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .project-link:hover {
-  background-color: var(--accent);
+  background-color: var(--primary);
+  color: #FFF;
 }
 </style>

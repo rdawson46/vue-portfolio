@@ -23,9 +23,6 @@ const toggleMenu = () => {
 
 <template>
   <header id="navbar" :class="{ 'menu-open': isMenuOpen, 'scrolled': isScrolled }">
-    <a href="/" class="logo">
-      <img src="/logoThing.png" alt="Logo" />
-    </a>
     <nav class="nav-links">
       <a href="#about-me">About</a>
       <a href="#resume">Resume</a>
@@ -76,17 +73,13 @@ header::before {
 }
 
 header.scrolled::before {
-  background-color: rgba(38, 28, 21, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--card-background);
+  background-color: rgba(26, 22, 20, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
 }
 
 header.scrolled {
   padding: 1rem 2rem;
-}
-
-.logo img {
-  height: 40px;
 }
 
 .nav-links {
@@ -97,9 +90,9 @@ header.scrolled {
 .nav-links a {
   color: var(--text);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   position: relative;
   transition: color 0.3s ease;
@@ -111,7 +104,8 @@ header.scrolled {
   left: 0;
   bottom: -5px;
   width: 100%;
-  height: 1px;
+  height: 2px;
+  border-radius: var(--radius-pill);
   background-color: var(--primary);
   transform: scaleX(0);
   transform-origin: right;
@@ -135,11 +129,12 @@ header.scrolled {
 .social-icon {
   fill: var(--text);
   height: 22px;
-  transition: fill 0.3s ease;
+  transition: fill 0.3s ease, transform 0.2s ease;
 }
 
 .social-icon:hover {
   fill: var(--primary);
+  transform: translateY(-2px);
 }
 
 .menu-toggle {
@@ -150,6 +145,7 @@ header.scrolled {
   flex-direction: column;
   gap: 5px;
   z-index: 101;
+  margin-left: auto;
 }
 
 .bar {
@@ -171,7 +167,8 @@ header.scrolled {
     right: 0;
     bottom: 0;
     width: 70%;
-    background-color: var(--background);
+    background-color: var(--card-background);
+    border-left: 1px solid var(--border);
     padding: 6rem 2rem 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
